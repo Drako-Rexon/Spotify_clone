@@ -4,31 +4,22 @@ import 'search.dart';
 import 'library.dart';
 
 void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Spotify',
-      theme: ThemeData(
-        primarySwatch: Colors.amber,
-      )
-      home: BottomNavigationBarExample(),
-    );
-  }
+      home: Home(),
+    ),
+  );
 }
 
 class BottomNavigationBarExample extends StatefulWidget {
   @override
-  State<BottomNavigationBarExample> createState() => _BottomNavigationBarExample();
+  State<BottomNavigationBarExample> createState() =>
+      _BottomNavigationBarExample();
 }
 
 class _BottomNavigationBarExample extends State<BottomNavigationBarExample> {
-
   PageController pControl = PageController();
   int currentInd = 0;
   var currentTab = [
