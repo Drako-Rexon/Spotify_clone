@@ -1,35 +1,15 @@
 import 'package:flutter/material.dart';
-import 'home.dart';
+import 'package:spotify_clone/root_app.dart';
 import 'search.dart';
 import 'library.dart';
+import 'root_app.dart';
 
 void main() {
   runApp(
-    MaterialApp(
+    const MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Spotify',
+      title: 'Clone',
       home: Home(),
     ),
   );
-}
-
-class BottomNavigationBarExample extends StatefulWidget {
-  @override
-  State<BottomNavigationBarExample> createState() =>
-      _BottomNavigationBarExample();
-}
-
-class _BottomNavigationBarExample extends State<BottomNavigationBarExample> {
-  PageController pControl = PageController();
-  int currentInd = 0;
-  var currentTab = [
-    Home(),
-    Search(),
-    Library(),
-  ];
-
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
 }
