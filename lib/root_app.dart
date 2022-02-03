@@ -51,6 +51,20 @@ class _HomeState extends State<Home> {
             ),
           ),
         ),
+        actions: const [
+          Padding(
+            padding: EdgeInsets.only(
+              right: 10,
+            ),
+            child: IconButton(
+              onPressed: null,
+              icon: Icon(
+                Icons.search,
+                color: Colors.white,
+              ),
+            ),
+          ),
+        ],
       ),
       bottomNavigationBar: getNav(),
       body: getBody(),
@@ -60,7 +74,7 @@ class _HomeState extends State<Home> {
   Widget getBody() {
     return IndexedStack(
       index: activeTab,
-      children: [
+      children: const [
         HomePage(),
         Center(
           child: Text(
