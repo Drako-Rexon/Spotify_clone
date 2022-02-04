@@ -29,7 +29,10 @@ class _HomePageState extends State<HomePage> {
               Row(
                 children: List.generate(songList1.length, (index) {
                   return Padding(
-                    padding: const EdgeInsets.only(right: 20, left: 20),
+                    padding: const EdgeInsets.only(
+                      right: 20,
+                      left: 20,
+                    ),
                     child: Column(
                       children: [
                         Text(
@@ -44,9 +47,9 @@ class _HomePageState extends State<HomePage> {
                     ),
                   );
                 }),
-              )
+              ),
             ],
-          )
+          ),
         ],
       ),
     );

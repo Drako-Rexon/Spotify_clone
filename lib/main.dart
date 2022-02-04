@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/root_app.dart';
-import 'search.dart';
-import 'library.dart';
 import 'root_app.dart';
 
 void main() {
