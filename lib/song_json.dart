@@ -1,1 +1,1 @@
-const List songList1 = ["Music", "Rock", "Soul", "Classic", "Pop", "R&B"];
+const List songList1 = ["Newest", "Music", "Rock", "Soul", "Classic", "Pop", "R&B"];
