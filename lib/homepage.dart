@@ -66,7 +66,7 @@ class _HomePageState extends State<HomePage> {
                                     width: 10,
                                     height: 3,
                                     decoration: BoxDecoration(
-                                        color: Color(0xFF1ed661),
+                                        color: const Color(0xFF1ed661),
                                         borderRadius: BorderRadius.circular(5)),
                                   )
                                 : Container(),
@@ -82,26 +82,40 @@ class _HomePageState extends State<HomePage> {
               ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: List.generate(10, (index) {
-                    return Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(
-                            right: 20,
-                          ),
-                          child: Container(
-                            width: 100,
-                            height: 100,
-                            decoration: BoxDecoration(
-                              color: Colors.amber,
-                              borderRadius: BorderRadius.circular(7),
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                    left: 15,
+                  ),
+                  child: Row(
+                    children: List.generate(songs.length, (index) {
+                      return GestureDetector(
+                        onTap: () {},
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                right: 25,
+                              ),
+                              child: Container(
+                                width: 160,
+                                height: 160,
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                    image: AssetImage(
+                                      songs[index]['img'],
+                                    ),
+                                    fit: BoxFit.cover
+                                  ),
+                                  color: const Color(0xFF1ed661),
+                                  borderRadius: BorderRadius.circular(11),
+                                ),
+                              ),
                             ),
-                          ),
+                          ],
                         ),
-                      ],
-                    );
-                  }),
+                      );
+                    }),
+                  ),
                 ),
               ),
             ],
