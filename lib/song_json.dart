@@ -124,3 +124,119 @@ const List songs = [
     ]
   }
 ];
+const List songs1 = [
+  {
+    "img": 'assets/images/img_11.jpg',
+    "title": "Feelin, Good",
+    "description": "feel good with this positively timeless playlist!",
+    "song_count": "100 songs",
+    "date": "about 19 hrs",
+    "color": "Color(0xFF1ed661)",
+    "song_url": "songs/1.mp3",
+    "songs": [
+      {"title": "imagination", "duration": "1:21"},
+      {"title": "Home_", "duration": "1:21"},
+      {"title": "Do I wanna know?", "duration": "2:17"},
+      {"title": "Whiskey Sour", "duration": "1:31"},
+      {"title": "Decisions", "duration": "1:29"}
+      // {
+      //   "title": "Tree", "duration": "1:51"
+      // },
+    ]
+  },
+  {
+    "img": 'assets/images/img_12.jpg',
+    "title": "Crazy",
+    "description": "Feel bold with this playlist!",
+    "song_count": "100 songs",
+    "date": "about 19 hrs",
+    "color": "Color(0xFF1ed661)",
+    "song_url": "songs/1.mp3",
+    "songs": [
+      {"title": "imagination", "duration": "1:21"},
+      {"title": "Home_", "duration": "1:21"},
+      {"title": "Do I wanna know?", "duration": "2:17"},
+      {"title": "Whiskey Sour", "duration": "1:31"},
+      {"title": "Decisions", "duration": "1:29"}
+      // {
+      //   "title": "Tree", "duration": "1:51"
+      // },
+    ]
+  },
+  {
+    "img": 'assets/images/img_13.jpg',
+    "title": "Hello",
+    "description": "lorem ipsum",
+    "song_count": "100 songs",
+    "date": "about 19 hrs",
+    "color": "Color(0xFF1ed661)",
+    "song_url": "songs/1.mp3",
+    "songs": [
+      {"title": "imagination", "duration": "1:21"},
+      {"title": "Home_", "duration": "1:21"},
+      {"title": "Do I wanna know?", "duration": "2:17"},
+      {"title": "Whiskey Sour", "duration": "1:31"},
+      {"title": "Decisions", "duration": "1:29"}
+      // {
+      //   "title": "Tree", "duration": "1:51"
+      // },
+    ]
+  },
+  {
+    "img": 'assets/images/img_14.jpg',
+    "title": "Lowzy",
+    "description": "lorem ipsum",
+    "song_count": "100 songs",
+    "date": "about 19 hrs",
+    "color": "Color(0xFF1ed661)",
+    "song_url": "songs/1.mp3",
+    "songs": [
+      {"title": "imagination", "duration": "1:21"},
+      {"title": "Home_", "duration": "1:21"},
+      {"title": "Do I wanna know?", "duration": "2:17"},
+      {"title": "Whiskey Sour", "duration": "1:31"},
+      {"title": "Decisions", "duration": "1:29"}
+      // {
+      //   "title": "Tree", "duration": "1:51"
+      // },
+    ]
+  },
+  {
+    "img": 'assets/images/img_15.jpg',
+    "title": "TMKOC",
+    "description": "lorem ipsum",
+    "song_count": "100 songs",
+    "date": "about 19 hrs",
+    "color": "Color(0xFF1ed661)",
+    "song_url": "songs/1.mp3",
+    "songs": [
+      {"title": "imagination", "duration": "1:21"},
+      {"title": "Home_", "duration": "1:21"},
+      {"title": "Do I wanna know?", "duration": "2:17"},
+      {"title": "Whiskey Sour", "duration": "1:31"},
+      {"title": "Decisions", "duration": "1:29"}
+      // {
+      //   "title": "Tree", "duration": "1:51"
+      // },
+    ]
+  },
+  {
+    "img": 'assets/images/img_16.jpg',
+    "title": "Feelin, Good",
+    "description": "lorem ipsum",
+    "song_count": "100 songs",
+    "date": "about 19 hrs",
+    "color": "Color(0xFF1ed661)",
+    "song_url": "songs/1.mp3",
+    "songs": [
+      {"title": "imagination", "duration": "1:21"},
+      {"title": "Home_", "duration": "1:21"},
+      {"title": "Do I wanna know?", "duration": "2:17"},
+      {"title": "Whiskey Sour", "duration": "1:31"},
+      {"title": "Decisions", "duration": "1:29"}
+      // {
+      //   "title": "Tree", "duration": "1:51"
+      // },
+    ]
+  }
+];
