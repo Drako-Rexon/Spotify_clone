@@ -107,13 +107,14 @@ class _HomeState extends State<Home> {
   Widget getNav() {
     return Container(
       // alignment: BottomAppBar,
-      height: 40,
+      height: 60,
       decoration: const BoxDecoration(
         color: Colors.black,
       ),
       width: MediaQuery.of(context).size.width,
       child: Padding(
         padding: const EdgeInsets.only(
+          top: 10,
           left: 25,
           right: 25,
         ),

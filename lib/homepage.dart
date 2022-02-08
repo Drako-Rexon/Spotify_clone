@@ -1,7 +1,7 @@
 // import 'dart:ffi';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
+// import 'package:flutter/rendering.dart';
 import 'package:spotify_clone/song_json.dart';
 
 class HomePage extends StatefulWidget {
@@ -101,13 +101,36 @@ class _HomePageState extends State<HomePage> {
                                 height: 160,
                                 decoration: BoxDecoration(
                                   image: DecorationImage(
-                                    image: AssetImage(
-                                      songs[index]['img'],
-                                    ),
-                                    fit: BoxFit.cover
-                                  ),
-                                  color: const Color(0xFF1ed661),
+                                      image: AssetImage(
+                                        songs[index]["img"],
+                                      ),
+                                      fit: BoxFit.cover),
                                   borderRadius: BorderRadius.circular(11),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 20,
+                            ),
+                            Text(
+                              songs[index]["title"],
+                              style: const TextStyle(
+                                fontSize: 15,
+                                color: Colors.white,
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 5,
+                            ),
+                            Container(
+                              width: 140,
+                              child: Text(
+                                songs[index]["description"],
+                                maxLines: 1,
+                                textAlign: TextAlign.center,
+                                style: const TextStyle(
+                                  fontSize: 10,
+                                  color: Colors.grey,
                                 ),
                               ),
                             ),
