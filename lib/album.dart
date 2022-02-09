@@ -89,7 +89,7 @@ class _AlbumPageState extends State<AlbumPage> {
               )
             ],
           ),
-          // we can use safearea widget for row to place all the content in correct area
+          // TODO: we can use SafeArea widget for row to place all the content in correct area
           SafeArea(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
