@@ -1,7 +1,9 @@
 // import 'dart:ffi';
 
 import 'package:flutter/material.dart';
-// import 'package:flutter/rendering.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:spotify_clone/album.dart';
+import 'package:flutter/rendering.dart';
 import 'package:spotify_clone/song_json.dart';
 
 class HomePage extends StatefulWidget {
@@ -34,7 +36,7 @@ class _HomePageState extends State<HomePage> {
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
-                  children: List.generate(songList1.length, (index) {
+                  children: List.generate(song_type_1.length, (index) {
                     return Padding(
                       padding: const EdgeInsets.only(
                         right: 20,
@@ -49,7 +51,7 @@ class _HomePageState extends State<HomePage> {
                         child: Column(
                           children: [
                             Text(
-                              songList1[index],
+                              song_type_1[index],
                               style: TextStyle(
                                 fontSize: 14,
                                 color: activeMenu1 == index
@@ -90,7 +92,18 @@ class _HomePageState extends State<HomePage> {
                   child: Row(
                     children: List.generate(songs.length, (index) {
                       return GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            PageTransition(
+                              alignment: Alignment.bottomCenter,
+                              child: AlbumPage(
+                                song: songs[index],
+                              ),
+                              type: PageTransitionType.scale,
+                            ),
+                          );
+                        },
                         child: Column(
                           children: [
                             Padding(
@@ -157,7 +170,7 @@ class _HomePageState extends State<HomePage> {
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
-                    children: List.generate(songList1.length, (index) {
+                    children: List.generate(song_type_1.length, (index) {
                       return Padding(
                         padding: const EdgeInsets.only(
                           right: 20,
@@ -172,7 +185,7 @@ class _HomePageState extends State<HomePage> {
                           child: Column(
                             children: [
                               Text(
-                                songList1[index],
+                                song_type_1[index],
                                 style: TextStyle(
                                   fontSize: 14,
                                   color: activeMenu2 == index
@@ -212,9 +225,20 @@ class _HomePageState extends State<HomePage> {
                       left: 15,
                     ),
                     child: Row(
-                      children: List.generate(songs1.length, (index) {
+                      children: List.generate(songs.length, (index) {
                         return GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              PageTransition(
+                                alignment: Alignment.bottomCenter,
+                                child: AlbumPage(
+                                  song: songs[index],
+                                ),
+                                type: PageTransitionType.scale,
+                              ),
+                            );
+                          },
                           child: Column(
                             children: [
                               Padding(
@@ -227,7 +251,7 @@ class _HomePageState extends State<HomePage> {
                                   decoration: BoxDecoration(
                                     image: DecorationImage(
                                         image: AssetImage(
-                                          songs1[index]["img"],
+                                          songs[index]["img"],
                                         ),
                                         fit: BoxFit.cover),
                                     borderRadius: BorderRadius.circular(11),
@@ -238,7 +262,7 @@ class _HomePageState extends State<HomePage> {
                                 height: 20,
                               ),
                               Text(
-                                songs1[index]["title"],
+                                songs[index]["title"],
                                 style: const TextStyle(
                                   fontSize: 15,
                                   color: Colors.white,
@@ -250,7 +274,7 @@ class _HomePageState extends State<HomePage> {
                               Container(
                                 width: 140,
                                 child: Text(
-                                  songs1[index]["description"],
+                                  songs[index]["description"],
                                   maxLines: 1,
                                   textAlign: TextAlign.center,
                                   style: const TextStyle(
