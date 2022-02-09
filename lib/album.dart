@@ -90,26 +90,28 @@ class _AlbumPageState extends State<AlbumPage> {
             ],
           ),
           // we can use safearea widget for row to place all the content in correct area
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              IconButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                icon: Icon(
-                  Icons.arrow_back_ios,
-                  color: Colors.white,
+          SafeArea(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                IconButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: Icon(
+                    Icons.arrow_back_ios,
+                    color: Colors.white,
+                  ),
                 ),
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: Icon(
-                  FeatherIcons.moreVertical,
-                  color: Colors.white,
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    FeatherIcons.moreVertical,
+                    color: Colors.white,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           )
         ],
       ),
