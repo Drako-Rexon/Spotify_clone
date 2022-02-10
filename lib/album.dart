@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:spotify_clone/player.dart';
 import 'package:spotify_clone/song_json.dart';
 
 var primary = const Color(0xFF1ed661);
@@ -15,8 +16,6 @@ class AlbumPage extends StatefulWidget {
 }
 
 class _AlbumPageState extends State<AlbumPage> {
-  
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +25,6 @@ class _AlbumPageState extends State<AlbumPage> {
   }
 
   Widget getAppBody() {
-    List albumSongs = widget.song['songs'];
     var size = MediaQuery.of(context).size;
     var heightForAlbum = MediaQuery.of(context).size.height;
 
@@ -201,19 +199,35 @@ class _AlbumPageState extends State<AlbumPage> {
                       bottom: 10,
                     ),
                     child: GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          PageTransition(
+                            alignment: Alignment.bottomCenter,
+                            child: MusicPlayer(
+                              title: widget.song['title'],
+                              color: widget.song['color'],
+                              description: widget.song['description'],
+                              img: widget.song['img'],
+                              songUrl: widget.song['song_url'],
+                            ),
+                            type: PageTransitionType.scale,
+                          ),
+                        );
+                      },
                       child: Row(
                         children: [
                           Container(
                             width: (size.width - 60) * 0.77,
                             height: 50,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Colors.black,
                             ),
                             child: Row(
                               children: [
                                 Text(
-                                  '${index + 1}   ' + widget.song["songs"][index]["title"],
+                                  '${index + 1}   ' +
+                                      widget.song["songs"][index]["title"],
                                   maxLines: 1,
                                   style: const TextStyle(
                                     color: Colors.white,
@@ -227,7 +241,7 @@ class _AlbumPageState extends State<AlbumPage> {
                           Container(
                             width: (size.width - 60) * 0.23,
                             height: 50,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Colors.black,
                             ),
                             child: Row(
@@ -241,9 +255,13 @@ class _AlbumPageState extends State<AlbumPage> {
                                     fontFamily: 'Proxima Nova',
                                   ),
                                 ),
-                                IconButton(onPressed: null, icon: Icon(Icons.play_circle,
-                                color: Colors.grey,
-                                ),)
+                                const IconButton(
+                                  onPressed: null,
+                                  icon: Icon(
+                                    Icons.play_circle,
+                                    color: Colors.grey,
+                                  ),
+                                )
                               ],
                             ),
                           ),
