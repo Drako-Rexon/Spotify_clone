@@ -214,6 +214,7 @@ class _AlbumPageState extends State<AlbumPage> {
                               children: [
                                 Text(
                                   '${index + 1}   ' + widget.song["songs"][index]["title"],
+                                  maxLines: 1,
                                   style: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 18,
