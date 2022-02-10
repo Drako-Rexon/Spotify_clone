@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:antdesign_icons/antdesign_icons.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
+import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:spotify_clone/album.dart';
 
 class MusicPlayer extends StatefulWidget {
@@ -71,7 +71,7 @@ class _MusicPlayerState extends State<MusicPlayer> {
                 padding: const EdgeInsets.only(
                   right: 40,
                   left: 40,
-                  top: 20,
+                  top: 10,
                 ),
                 child: Container(
                   width: size.width - 80,
@@ -112,7 +112,7 @@ class _MusicPlayerState extends State<MusicPlayer> {
             ],
           ),
           const SizedBox(
-            height: 30,
+            height: 20,
           ),
           Container(
             width: size.width - 100,
@@ -168,12 +168,12 @@ class _MusicPlayerState extends State<MusicPlayer> {
                   _currentSliderValue = value;
                 });
               }),
-          SizedBox(
-            height: 20,
+          const SizedBox(
+            height: 10,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(
-              horizontal: 30,
+              horizontal: 20,
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -193,8 +193,8 @@ class _MusicPlayerState extends State<MusicPlayer> {
               ],
             ),
           ),
-          SizedBox(
-            height: 25,
+          const SizedBox(
+            height: 10,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(
@@ -220,13 +220,20 @@ class _MusicPlayerState extends State<MusicPlayer> {
                   ),
                 ),
                 IconButton(
+                  iconSize: 50,
                   onPressed: () {},
                   icon: Container(
                     decoration: BoxDecoration(
                       color: primary,
                       shape: BoxShape.circle,
                     ),
-                    
+                    child: const Center(
+                      child: Icon(
+                        Entypo.controller_paus,
+                        size: 28,
+                        color: Colors.white,
+                      ),
+                    ),
                   ),
                 ),
                 IconButton(
@@ -248,6 +255,33 @@ class _MusicPlayerState extends State<MusicPlayer> {
               ],
             ),
           ),
+          const SizedBox(
+            height: 20,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                Feather.tv,
+                color: primary,
+                size: 20,
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                  top: 3.0,
+                ),
+                child: Text(
+                  "Chromecast is ready",
+                  style: TextStyle(
+                    color: primary,
+                  ),
+                ),
+              )
+            ],
+          )
         ],
       ),
     );

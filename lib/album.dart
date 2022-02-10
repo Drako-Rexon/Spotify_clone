@@ -231,7 +231,7 @@ class _AlbumPageState extends State<AlbumPage> {
                                   maxLines: 1,
                                   style: const TextStyle(
                                     color: Colors.white,
-                                    fontSize: 18,
+                                    fontSize: 16,
                                     fontFamily: 'Proxima Nova',
                                   ),
                                 ),
@@ -251,7 +251,7 @@ class _AlbumPageState extends State<AlbumPage> {
                                   widget.song["songs"][index]['duration'],
                                   style: const TextStyle(
                                     color: Colors.white,
-                                    fontSize: 18,
+                                    fontSize: 16,
                                     fontFamily: 'Proxima Nova',
                                   ),
                                 ),
