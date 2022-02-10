@@ -90,7 +90,7 @@ class _HomePageState extends State<HomePage> {
                     left: 15,
                   ),
                   child: Row(
-                    children: List.generate(songs.length, (index) {
+                    children: List.generate(songs.length - 5, (index) {
                       return GestureDetector(
                         onTap: () {
                           Navigator.push(
@@ -225,7 +225,7 @@ class _HomePageState extends State<HomePage> {
                       left: 15,
                     ),
                     child: Row(
-                      children: List.generate(songs.length, (index) {
+                      children: List.generate(songs.length - 5, (index) {
                         return GestureDetector(
                           onTap: () {
                             Navigator.push(
@@ -233,7 +233,7 @@ class _HomePageState extends State<HomePage> {
                               PageTransition(
                                 alignment: Alignment.bottomCenter,
                                 child: AlbumPage(
-                                  song: songs[index],
+                                  song: songs[index + 5],
                                 ),
                                 type: PageTransitionType.scale,
                               ),
@@ -251,7 +251,7 @@ class _HomePageState extends State<HomePage> {
                                   decoration: BoxDecoration(
                                     image: DecorationImage(
                                         image: AssetImage(
-                                          songs[index]["img"],
+                                          songs[index +5]["img"],
                                         ),
                                         fit: BoxFit.cover),
                                     borderRadius: BorderRadius.circular(11),
@@ -262,7 +262,7 @@ class _HomePageState extends State<HomePage> {
                                 height: 20,
                               ),
                               Text(
-                                songs[index]["title"],
+                                songs[index+ 5]["title"],
                                 style: const TextStyle(
                                   fontSize: 15,
                                   color: Colors.white,
@@ -274,7 +274,7 @@ class _HomePageState extends State<HomePage> {
                               Container(
                                 width: 140,
                                 child: Text(
-                                  songs[index]["description"],
+                                  songs[index + 5]["description"],
                                   maxLines: 1,
                                   textAlign: TextAlign.center,
                                   style: const TextStyle(
