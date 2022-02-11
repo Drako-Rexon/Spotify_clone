@@ -1,6 +1,9 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:spotify_clone/album.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 class MusicPlayer extends StatefulWidget {
   final String title;
@@ -24,6 +27,52 @@ class MusicPlayer extends StatefulWidget {
 
 class _MusicPlayerState extends State<MusicPlayer> {
   double _currentSliderValue = 10;
+
+  late AudioPlayer appPlayer;
+  late AudioCache audioCache;
+  bool isPlaying = true;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    initPlayer();
+  }
+
+  initPlayer() {
+    appPlayer = AudioPlayer();
+    audioCache = AudioCache(
+      fixedPlayer: appPlayer,
+    );
+    playSound(widget.songUrl);
+  }
+
+  playSound(localPath) async {
+    await audioCache.play(localPath);
+  }
+
+  stopSound(localPath) async {
+    Uri audioFile = await audioCache.load(localPath);
+    await appPlayer.setUrl(audioFile.path);
+    appPlayer.stop();
+  }
+
+  seekSound() async {
+    Uri audioFile = await audioCache.load(widget.songUrl);
+    await appPlayer.setUrl(audioFile.path);
+    appPlayer.seek(
+      const Duration(
+        milliseconds: 2000,
+      ),
+    );
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    stopSound(widget.songUrl);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -166,6 +215,7 @@ class _MusicPlayerState extends State<MusicPlayer> {
                 setState(() {
                   _currentSliderValue = value;
                 });
+                seekSound();
               }),
           const SizedBox(
             height: 10,
@@ -220,20 +270,34 @@ class _MusicPlayerState extends State<MusicPlayer> {
                 ),
                 IconButton(
                   iconSize: 50,
-                  onPressed: () {},
                   icon: Container(
                     decoration: BoxDecoration(
                       color: primary,
                       shape: BoxShape.circle,
                     ),
-                    child: const Center(
+                    child: Center(
                       child: Icon(
-                        Entypo.controller_paus,
+                        isPlaying
+                            ? Entypo.controller_stop
+                            : Entypo.controller_play,
                         size: 28,
                         color: Colors.white,
                       ),
                     ),
                   ),
+                  onPressed: () {
+                    if (isPlaying) {
+                      stopSound(widget.songUrl);
+                      setState(() {
+                        isPlaying = false;
+                      });
+                    } else {
+                      stopSound(widget.songUrl);
+                      setState(() {
+                        isPlaying = true;
+                      });
+                    }
+                  },
                 ),
                 IconButton(
                   onPressed: () {},
@@ -278,9 +342,9 @@ class _MusicPlayerState extends State<MusicPlayer> {
                     color: primary,
                   ),
                 ),
-              )
+              ),
             ],
-          )
+          ),
         ],
       ),
     );
