@@ -6,7 +6,7 @@ void main() {
   runApp(
     const MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Clone',
+      title: 'Spotify Clone',
       home: Home(),
     ),
   );

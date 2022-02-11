@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import "package:flutter_feather_icons/flutter_feather_icons.dart";
+import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:spotify_clone/homepage.dart';
 
 class Home extends StatefulWidget {
@@ -12,10 +12,10 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   int index = 0, activeTab = 0;
   List navIcon = [
-    FeatherIcons.home,
-    FeatherIcons.search,
-    FeatherIcons.book,
-    FeatherIcons.settings,
+    Feather.home,
+    Feather.search,
+    Feather.book,
+    Feather.settings,
   ];
 
   @override

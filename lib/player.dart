@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:spotify_clone/album.dart';
 
@@ -121,7 +120,7 @@ class _MusicPlayerState extends State<MusicPlayer> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 const Icon(
-                  FeatherIcons.folderPlus,
+                  Feather.folder_plus,
                   color: Colors.white,
                 ),
                 Column(
@@ -149,7 +148,7 @@ class _MusicPlayerState extends State<MusicPlayer> {
                   ],
                 ),
                 const Icon(
-                  FeatherIcons.moreVertical,
+                  Feather.more_vertical,
                   color: Colors.white,
                 )
               ],
@@ -206,7 +205,7 @@ class _MusicPlayerState extends State<MusicPlayer> {
                 IconButton(
                   onPressed: () {},
                   icon: Icon(
-                    FeatherIcons.shuffle,
+                    Feather.shuffle,
                     color: Colors.white.withOpacity(0.8),
                     size: 25,
                   ),
@@ -214,7 +213,7 @@ class _MusicPlayerState extends State<MusicPlayer> {
                 IconButton(
                   onPressed: () {},
                   icon: Icon(
-                    FeatherIcons.skipBack,
+                    Feather.skip_back,
                     color: Colors.white.withOpacity(0.8),
                     size: 25,
                   ),
@@ -239,7 +238,7 @@ class _MusicPlayerState extends State<MusicPlayer> {
                 IconButton(
                   onPressed: () {},
                   icon: Icon(
-                    FeatherIcons.skipForward,
+                    Feather.skip_forward,
                     color: Colors.white.withOpacity(0.8),
                     size: 25,
                   ),
@@ -247,7 +246,7 @@ class _MusicPlayerState extends State<MusicPlayer> {
                 IconButton(
                   onPressed: () {},
                   icon: Icon(
-                    FeatherIcons.repeat,
+                    Feather.repeat,
                     color: Colors.white.withOpacity(0.8),
                     size: 25,
                   ),

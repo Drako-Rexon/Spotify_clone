@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_feather_icons/flutter_feather_icons.dart';
+import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:spotify_clone/player.dart';
 import 'package:spotify_clone/song_json.dart';
@@ -83,7 +83,7 @@ class _AlbumPageState extends State<AlbumPage> {
                           ),
                         ),
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),
@@ -290,7 +290,7 @@ class _AlbumPageState extends State<AlbumPage> {
                 IconButton(
                   onPressed: () {},
                   icon: const Icon(
-                    FeatherIcons.moreVertical,
+                    Feather.more_vertical,
                     color: Colors.white,
                   ),
                 ),

@@ -17,6 +17,7 @@ const List song_type_2 = [
   "Discover",
   "Concerts",
 ];
+
 const List songs = [
   {
     "img": "assets/images/img_3.jpg",
@@ -436,10 +437,9 @@ const List songs = [
 //       {"title": "Do I wanna know?", "duration": "2:17"},
 //       {"title": "Whiskey Sour", "duration": "1:31"},
 //       {"title": "Decisions", "duration": "1:29"}
-//       // {
-//       //   "title": "Tree", "duration": "1:51"
-//       // },
+//      {
+//        "title": "Tree", "duration": "1:51"
+//      },
 //     ]
 //   }
 // ];
-
