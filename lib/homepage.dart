@@ -1,6 +1,3 @@
-// import 'dart:ffi';
-// import 'package:flutter/rendering.dart';
-
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:spotify_clone/album.dart';
@@ -69,8 +66,9 @@ class _HomePageState extends State<HomePage> {
                                     width: 10,
                                     height: 3,
                                     decoration: BoxDecoration(
-                                        color: const Color(0xFF1ed661),
-                                        borderRadius: BorderRadius.circular(5)),
+                                      color: const Color(0xFF1ed661),
+                                      borderRadius: BorderRadius.circular(5),
+                                    ),
                                   )
                                 : Container(),
                           ],
@@ -251,7 +249,7 @@ class _HomePageState extends State<HomePage> {
                                   decoration: BoxDecoration(
                                     image: DecorationImage(
                                         image: AssetImage(
-                                          songs[index +5]["img"],
+                                          songs[index + 5]["img"],
                                         ),
                                         fit: BoxFit.cover),
                                     borderRadius: BorderRadius.circular(11),
@@ -262,7 +260,7 @@ class _HomePageState extends State<HomePage> {
                                 height: 20,
                               ),
                               Text(
-                                songs[index+ 5]["title"],
+                                songs[index + 5]["title"],
                                 style: const TextStyle(
                                   fontSize: 15,
                                   color: Colors.white,
