@@ -38,10 +38,6 @@ class _HomeState extends State<Home> {
           padding: EdgeInsets.only(
             left: 0,
           ),
-          // child: Image(
-          // height: 500,
-          // image: AssetImage('assets/images/spotify.png'),
-          // ),
           child: Text(
             'Spotify',
             style: TextStyle(
