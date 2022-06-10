@@ -21,12 +21,17 @@ class CardHomeTopPage extends StatelessWidget {
         children: [
           Container(
             decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/images/home/Art.png'),
-              ),
+                // image: DecorationImage(
+                //   image: AssetImage('assets/images/home/Art.png'),
+                // ),
+                ),
+          ),
+          Text(
+            "Liked Songs",
+            style: TextStyle(
+              color: AppColor.spotifyWhite,
             ),
           ),
-          Text("Liked Songs"),
           IconButton(
             onPressed: () {},
             icon: Icon(Icons.more_horiz),

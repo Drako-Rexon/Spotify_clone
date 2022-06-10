@@ -15,7 +15,7 @@ class HeadHomePage extends StatelessWidget {
           "Good Evening",
           style: TextStyle(
             fontSize: 20,
-            fontFamily: 'CircularStd',
+            // fontFamily: 'CircularStd',
             fontWeight: FontWeight.bold,
             color: AppColor.spotifyWhite,
           ),

@@ -85,15 +85,15 @@ flutter:
         - asset: assets/fonts/Proxima Nova Font.otf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
-    - family: CircularStd
-      fonts:
-        - asset: assets/icons/NavIcons.ttf
-    - family: NavIcons
-      fonts:
-        - asset: assets/icons/CircularStd.ttf
-    - family: CircularStd-Book
-      fonts:
-        - asset: assets/icons/CircularStd-Book.ttf
+    # - family: CircularStd
+    #   fonts:
+    #     - asset: assets/icons/NavIcons.ttf
+    # - family: NavIcons
+    #   fonts:
+    #     - asset: assets/fonts/CircularStd-Black.ttf
+    # - family: CircularStd-Book
+    #   fonts:
+    #     - asset: assets/fonts/CircularStd-Book.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
