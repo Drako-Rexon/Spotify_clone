@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Library extends StatefulWidget {
-  Library({Key? key}) : super(key: key);
+  const Library({Key? key}) : super(key: key);
 
   @override
   State<Library> createState() => _LibraryState();

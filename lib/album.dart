@@ -152,7 +152,7 @@ class _AlbumPageState extends State<AlbumPage> {
                               padding: const EdgeInsets.only(
                                 left: 20.0,
                               ),
-                              child: Container(
+                              child: SizedBox(
                                 width: 120,
                                 child: Row(
                                   mainAxisAlignment:

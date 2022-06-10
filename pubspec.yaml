@@ -36,7 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   page_transition: "^2.0.5"
   flutter_vector_icons: ^1.0.0
-  audioplayers: ^0.20.1
+  # audioplayers: ^0.20.1
 
 dev_dependencies:
   flutter_test:

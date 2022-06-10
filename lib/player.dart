@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:spotify_clone/album.dart';
-import 'package:audioplayers/audioplayers.dart';
 
 class MusicPlayer extends StatefulWidget {
   final String title;
@@ -26,8 +25,8 @@ class MusicPlayer extends StatefulWidget {
 class _MusicPlayerState extends State<MusicPlayer> {
   double _currentSliderValue = 10;
 
-  late AudioPlayer appPlayer;
-  late AudioCache audioCache;
+  // late AudioPlayer appPlayer;
+  // late AudioCache audioCache;
   bool isPlaying = true;
 
   @override
@@ -38,31 +37,31 @@ class _MusicPlayerState extends State<MusicPlayer> {
   }
 
   initPlayer() {
-    appPlayer = AudioPlayer();
-    audioCache = AudioCache(
-      fixedPlayer: appPlayer,
-    );
+    // appPlayer = AudioPlayer();
+    // audioCache = AudioCache(
+    //   fixedPlayer: appPlayer,
+    // );
     playSound(widget.songUrl);
   }
 
   playSound(localPath) async {
-    await audioCache.play(localPath);
+    // await audioCache.play(localPath);
   }
 
   stopSound(localPath) async {
-    Uri audioFile = await audioCache.load(localPath);
-    await appPlayer.setUrl(audioFile.path);
-    appPlayer.stop();
+    // Uri audioFile = await audioCache.load(localPath);
+    // await appPlayer.setUrl(audioFile.path);
+    // appPlayer.stop();
   }
 
   seekSound() async {
-    Uri audioFile = await audioCache.load(widget.songUrl);
-    await appPlayer.setUrl(audioFile.path);
-    appPlayer.seek(
-      const Duration(
-        milliseconds: 2000,
-      ),
-    );
+    // Uri audioFile = await audioCache.load(widget.songUrl);
+    // await appPlayer.setUrl(audioFile.path);
+    // appPlayer.seek(
+    //   const Duration(
+    //     milliseconds: 2000,
+    //   ),
+    // );
   }
 
   @override
@@ -160,7 +159,7 @@ class _MusicPlayerState extends State<MusicPlayer> {
           const SizedBox(
             height: 20,
           ),
-          Container(
+          SizedBox(
             width: size.width - 100,
             height: 70,
             child: Row(
@@ -181,7 +180,7 @@ class _MusicPlayerState extends State<MusicPlayer> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       width: 150,
                       child: Text(
                         widget.description,

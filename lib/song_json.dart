@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-List song_type_1 = [
+const List song_type_1 = [
   "Music",
   "Rock",
   "Soul",
