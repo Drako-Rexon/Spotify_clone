@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_clone/homepage.dart';
+import 'package:spotify_clone/homepage/homepage.dart';
 
 class RedirectingIndexStack extends StatelessWidget {
   const RedirectingIndexStack({

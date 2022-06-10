@@ -64,6 +64,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/images/home/
     - assets/fonts/
   #   - images/a_dot_ham.jpeg
 
@@ -84,9 +85,15 @@ flutter:
         - asset: assets/fonts/Proxima Nova Font.otf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
-    - family: NavIcons
+    - family: CircularStd
       fonts:
         - asset: assets/icons/NavIcons.ttf
+    - family: NavIcons
+      fonts:
+        - asset: assets/icons/CircularStd.ttf
+    - family: CircularStd-Book
+      fonts:
+        - asset: assets/icons/CircularStd-Book.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/components/colors.dart';
 import 'package:spotify_clone/components/nav_icons_icons.dart';
-import 'package:spotify_clone/homepage.dart';
+import 'package:spotify_clone/homepage/homepage.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
