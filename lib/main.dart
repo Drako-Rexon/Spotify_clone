@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_clone/root_app.dart';
-import 'root_app.dart';
+import 'package:spotify_clone/redirecting_page/redirecting.dart';
 
 void main() {
   runApp(const MyApp());
