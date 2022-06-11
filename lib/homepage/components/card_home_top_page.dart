@@ -10,7 +10,7 @@ class CardHomeTopPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: ResSize.halfwidth - 20,
+      width: ResSize.halfwidth - 30,
       height: 50,
       decoration: BoxDecoration(
         color: AppColor.lightGrey.withOpacity(0.45),
@@ -18,23 +18,37 @@ class CardHomeTopPage extends StatelessWidget {
       ),
       child: Row(
         mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Container(
-            decoration: BoxDecoration(
-                // image: DecorationImage(
-                //   image: AssetImage('assets/images/home/Art.png'),
-                // ),
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Container(
+                width: 50,
+                height: 50,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/home/Art-5.png'),
+                  ),
                 ),
-          ),
-          Text(
-            "Liked Songs",
-            style: TextStyle(
-              color: AppColor.spotifyWhite,
-            ),
+              ),
+              SizedBox(width: 5),
+              Text(
+                "Liked Songs",
+                style: TextStyle(
+                  fontSize: 9,
+                  fontWeight: FontWeight.bold,
+                  color: AppColor.spotifyWhite,
+                ),
+              ),
+            ],
           ),
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.more_horiz),
+            icon: Icon(
+              Icons.more_horiz,
+              color: AppColor.spotifyWhite,
+            ),
           ),
         ],
       ),

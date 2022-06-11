@@ -3,6 +3,9 @@ import 'package:get/get.dart';
 import 'package:spotify_clone/redirecting_page/redirecting.dart';
 
 void main() {
+  // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+  //   statusBarBrightness: Brightness.light,
+  // ));
   runApp(const MyApp());
 }
 

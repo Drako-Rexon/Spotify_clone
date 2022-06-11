@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/components/colors.dart';
-import 'package:spotify_clone/components/nav_icons_icons.dart';
 import 'package:spotify_clone/homepage/homepage.dart';
 
 class Home extends StatefulWidget {
@@ -13,14 +12,20 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   int activeTab = 0;
   List navIconOn = [
-    NavIcons.state_on_2,
-    NavIcons.state_on_1,
-    NavIcons.state_on
+    // NavIcons.state_on_2,
+    // NavIcons.state_on_1,
+    // NavIcons.state_on
+    Icons.home,
+    Icons.home,
+    Icons.home,
   ];
   List navIconOff = [
-    NavIcons.state_off_2,
-    NavIcons.state_off_1,
-    NavIcons.state_off
+    // NavIcons.state_off_2,
+    // NavIcons.state_off_1,
+    // NavIcons.state_off
+    Icons.home,
+    Icons.home,
+    Icons.home,
   ];
 
   @override
