@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/components/colors.dart';
 import 'package:spotify_clone/components/res_size.dart';
+import 'package:spotify_clone/components/sample_song_json.dart';
+import 'package:spotify_clone/homepage/components/card_home_top_page.dart';
 import 'package:spotify_clone/homepage/components/head_home_page.dart';
-import 'package:spotify_clone/homepage/components/row_card_home_top.dart';
 import 'package:spotify_clone/homepage/components/single_song_profile_card.dart';
 
 class HomePage extends StatefulWidget {
@@ -62,14 +63,37 @@ class _HomePageState extends State<HomePage> {
           SafeArea(
             child: Column(
               children: [
-                SizedBox(height: 30),
-                HeadHomePage(),
-                SizedBox(height: 5),
-                RowCardHomeTop(),
-                SizedBox(height: 10),
-                RowCardHomeTop(),
-                SizedBox(height: 10),
-                RowCardHomeTop(),
+                // SizedBox(height: 30),
+                Container(
+                  padding: EdgeInsets.only(
+                    top: 30,
+                    bottom: 5,
+                    left: 8,
+                  ),
+                  child: HeadHomePage(text: "Good Evening"),
+                ),
+                // SizedBox(height: 5),
+                Column(
+                  children: List.generate((homeTopCardOne.length / 2).toInt(),
+                      (index) {
+                    return Container(
+                      padding: const EdgeInsets.only(bottom: 10),
+                      width: ResSize.screenWidth - 30,
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          CardHomeTopPage(
+                              img: homeTopCardOne[index * 2]["img"],
+                              text: homeTopCardOne[index * 2]["title"]),
+                          CardHomeTopPage(
+                              img: homeTopCardOne[(index * 2) + 1]["img"],
+                              text: homeTopCardOne[(index * 2) + 1]["title"]),
+                        ],
+                      ),
+                    );
+                  }),
+                ),
                 SizedBox(height: 50),
                 // * Card with profile and card
                 SingleCardWithPlayerProfile()

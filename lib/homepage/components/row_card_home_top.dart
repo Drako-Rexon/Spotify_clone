@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_clone/homepage/components/card_home_top_page.dart';
 
 class RowCardHomeTop extends StatelessWidget {
   const RowCardHomeTop({
@@ -11,8 +10,8 @@ class RowCardHomeTop extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        CardHomeTopPage(),
-        CardHomeTopPage(),
+        // CardHomeTopPage(text: "Liked Songs1"),
+        // CardHomeTopPage(text: "Liked Songs1"),
       ],
     );
   }

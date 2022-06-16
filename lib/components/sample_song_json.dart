@@ -200,3 +200,12 @@ const List songs = [
     ]
   }
 ];
+
+List homeTopCardOne = [
+  {"title": "Liked Songs", "img": "assets/images/home/Art-5.png"},
+  {"title": "Augustten Ft jhesy", "img": "assets/images/home/Art-4.png"},
+  {"title": "Emotional Songs", "img": "assets/images/home/Art-3.png"},
+  {"title": "A Place We Knew", "img": "assets/images/home/Art-2.png"},
+  {"title": "Origins/Deluxe", "img": "assets/images/home/Art-1.png"},
+  {"title": "1000 Forms Of Fears", "img": "assets/images/home/Art.png"},
+];

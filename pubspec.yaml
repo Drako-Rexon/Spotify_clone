@@ -37,6 +37,7 @@ dependencies:
   page_transition: "^2.0.5"
   flutter_vector_icons: ^1.0.0
   get: ^4.6.5
+  unicons: ^2.1.0
   # audioplayers: ^0.20.1
 
 dev_dependencies:
