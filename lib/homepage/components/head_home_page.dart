@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/components/colors.dart';
-import 'package:spotify_clone/homepage/components/single_song_profile_card.dart';
+import 'package:spotify_clone/homepage/components/regular_text.dart';
 import 'package:unicons/unicons.dart';
 
 class HeadHomePage extends StatelessWidget {

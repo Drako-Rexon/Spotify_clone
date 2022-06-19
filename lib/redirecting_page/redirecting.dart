@@ -66,7 +66,7 @@ class _HomeState extends State<Home> {
     return Container(
       height: 60,
       decoration: BoxDecoration(
-        color: AppColor.spotifyBlack,
+        color: AppColor.spotifyBlack.withOpacity(0.5),
       ),
       width: MediaQuery.of(context).size.width,
       child: Row(

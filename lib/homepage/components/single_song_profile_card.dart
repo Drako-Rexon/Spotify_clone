@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/components/colors.dart';
 import 'package:spotify_clone/components/res_size.dart';
+import 'package:spotify_clone/homepage/components/regular_text.dart';
 
 class SingleCardWithPlayerProfile extends StatelessWidget {
   const SingleCardWithPlayerProfile({
@@ -9,11 +10,8 @@ class SingleCardWithPlayerProfile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: ResSize.screenWidth - 40,
-      decoration: BoxDecoration(
-          // color: Colors.teal,
-          ),
       child: Column(
         children: [
           // * Profile
@@ -29,14 +27,6 @@ class SingleCardWithPlayerProfile extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Text(
-                  //   ,
-                  //   style: TextStyle(
-                  //     fontSize: 8,
-                  //     fontWeight: FontWeight.w300,
-                  //     color: AppColor.spotifyWhite,
-                  //   ),
-                  // ),
                   RegularText(
                     text: "NEW RELEASE FROM",
                     textSize: 9,
@@ -62,37 +52,31 @@ class SingleCardWithPlayerProfile extends StatelessWidget {
             child: Row(
               mainAxisSize: MainAxisSize.max,
               children: [
-                Image(
-                  image: AssetImage('assets/images/home/Pic-1.png'),
-                ),
-                Container(
-                  padding: const EdgeInsets.only(
-                    left: 10,
-                    top: 10,
-                    bottom: 10,
-                    right: 10,
-                  ),
+                Image(image: AssetImage('assets/images/home/Pic-1.png')),
+                Expanded(
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     mainAxisSize: MainAxisSize.max,
-                    // crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           RegularText(
                             text: "Hurtless (Acoustic)",
                             isBold: true,
-                            textSize: 16,
+                            textSize: 13,
                           ),
+                          SizedBox(height: 5),
                           Row(
                             children: [
                               RegularText(text: "Single"),
+                              SizedBox(width: 5),
                               Icon(
                                 Icons.circle,
                                 color: AppColor.spotifyWhite,
                                 size: 5,
                               ),
+                              SizedBox(width: 5),
                               RegularText(text: "Dean Lewis"),
                             ],
                           ),
@@ -119,31 +103,6 @@ class SingleCardWithPlayerProfile extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class RegularText extends StatelessWidget {
-  const RegularText({
-    Key? key,
-    required this.text,
-    this.textSize = 12,
-    this.isBold = false,
-    this.textColor = Colors.white,
-  }) : super(key: key);
-  final String text;
-  final double textSize;
-  final bool isBold;
-  final Color textColor;
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      text,
-      style: TextStyle(
-        fontSize: textSize,
-        color: textColor,
-        fontWeight: isBold ? FontWeight.bold : FontWeight.normal,
       ),
     );
   }
