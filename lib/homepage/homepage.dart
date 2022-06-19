@@ -4,6 +4,8 @@ import 'package:spotify_clone/components/res_size.dart';
 import 'package:spotify_clone/components/sample_song_json.dart';
 import 'package:spotify_clone/homepage/components/card_home_top_page.dart';
 import 'package:spotify_clone/homepage/components/head_home_page.dart';
+import 'package:spotify_clone/homepage/components/home_carousel_typeOne.dart';
+import 'package:spotify_clone/homepage/components/home_carousel_typeTwo.dart';
 import 'package:spotify_clone/homepage/components/regular_text.dart';
 import 'package:spotify_clone/homepage/components/single_song_profile_card.dart';
 
@@ -61,7 +63,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          SafeArea(
+          SingleChildScrollView(
             child: Column(
               children: [
                 // SizedBox(height: 30),
@@ -98,16 +100,19 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(height: 50),
                 // * Card with profile and card
                 SingleCardWithPlayerProfile(),
-                Container(
-                  padding: EdgeInsets.all(20),
-                  alignment: Alignment.centerLeft,
-                  child: RegularText(
-                    text: "Dsicover Something New",
-                    textSize: 18,
-                    isBold: true,
-                  ),
+                SizedBox(height: 20),
+                HomeCarouselTypeOne(
+                  listing: homeCarouselTypeOne,
+                  heading: "Discover something new",
                 ),
-
+                HomeCarouselTypeOne(
+                  listing: homeCarouselTypeOne2,
+                  heading: "Just the hits",
+                ),
+                HomeCarouselTypeTwo(
+                  heading: "More of what you like",
+                  listing: homeCarouselTypeTwo,
+                )
               ],
             ),
           )

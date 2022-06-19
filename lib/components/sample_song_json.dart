@@ -209,3 +209,86 @@ List homeTopCardOne = [
   {"title": "Origins/Deluxe", "img": "assets/images/home/Art-1.png"},
   {"title": "1000 Forms Of Fears", "img": "assets/images/home/Art.png"},
 ];
+List homeCarouselTypeOne = [
+  {
+    "img": "assets/images/home/carousel1/1.png",
+    "text0": "Your weekly mixtape of fresh music. Enjoy new music and dramatic",
+  },
+  {
+    "img": "assets/images/home/carousel1/2.png",
+    "title": "Numb Little Bug",
+    "type": "Single",
+    "album": "Em Beihold",
+  },
+  {
+    "img": "assets/images/home/carousel1/3.png",
+    "title": "Evering Road (Deluxe)",
+    "type": "Album",
+    "album": "Tom Grennen",
+  },
+  {
+    "img": "assets/images/home/carousel1/4.png",
+    "title": "Numb Little Bug",
+    "type": "Single",
+    "album": "Em Beihold",
+  },
+  {
+    "img": "assets/images/home/carousel1/5.png",
+    "title": "Evering Road (Deluxe)",
+    "type": "Album",
+    "album": "Tom Grennen",
+  },
+];
+List homeCarouselTypeOne2 = [
+  {
+    "img": "assets/images/home/carousel2/1.png",
+    "text0": "Your weekly mixtape of fresh music. Enjoy new music and dramatic",
+  },
+  {
+    "img": "assets/images/home/carousel2/2.png",
+    "title": "Numb Little Bug",
+    "type": "Single",
+    "album": "Em Beihold",
+  },
+  {
+    "img": "assets/images/home/carousel2/3.png",
+    "title": "Evering Road (Deluxe)",
+    "type": "Album",
+    "album": "Tom Grennen",
+  },
+  {
+    "img": "assets/images/home/carousel2/4.png",
+    "title": "Numb Little Bug",
+    "type": "Single",
+    "album": "Em Beihold",
+  },
+  {
+    "img": "assets/images/home/carousel2/5.png",
+    "title": "Evering Road (Deluxe)",
+    "type": "Album",
+    "album": "Tom Grennen",
+  },
+];
+List homeCarouselTypeTwo = [
+  {
+    "img": "assets/images/home/carousel3/1.png",
+    "title":
+        "Maverick City Music, Hillsong UNITED, Hillsong Worship, Better Music"
+  },
+  {
+    "img": "assets/images/home/carousel3/2.png",
+    "title": "Ed Sheeran, Passenger, Justin Bieber, Dean Lewis, Taylor Swift"
+  },
+  {
+    "img": "assets/images/home/carousel3/3.png",
+    "title": "Yo-Yo Ma, Ludovico Einaudi, Alexis Ffrench, Daniel Hope, Yi..."
+  },
+  {
+    "img": "assets/images/home/carousel3/4.png",
+    "title": "Ed Sheeran, Passenger, Justin Bieber, Dean Lewis, Taylor Swift"
+  },
+  {
+    "img": "assets/images/home/carousel3/5.png",
+    "title": "Yo-Yo Ma, Ludovico Einaudi, Alexis Ffrench, Daniel Hope, Yi..."
+  },
+];
