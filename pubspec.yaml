@@ -69,6 +69,8 @@ flutter:
     - assets/images/home/carousel1/
     - assets/images/home/carousel2/
     - assets/images/home/carousel3/
+    - assets/images/home/carousel4/
+    - assets/images/home/carousel5/
     - assets/fonts/
   #   - images/a_dot_ham.jpeg
 

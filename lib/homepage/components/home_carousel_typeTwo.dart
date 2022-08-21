@@ -25,7 +25,7 @@ class HomeCarouselTypeTwo extends StatelessWidget {
         ),
         Container(
           margin: EdgeInsets.symmetric(horizontal: 10),
-          height: 210,
+          height: 240,
           child: ListView.builder(
             itemCount: 5,
             scrollDirection: Axis.horizontal,
@@ -35,8 +35,8 @@ class HomeCarouselTypeTwo extends StatelessWidget {
                 children: [
                   Container(
                     margin: EdgeInsets.all(10),
-                    width: 150,
-                    height: 150,
+                    width: 190,
+                    height: 190,
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         fit: BoxFit.cover,
@@ -45,7 +45,7 @@ class HomeCarouselTypeTwo extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    width: 150,
+                    width: 190,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       // mainAxisSize: MainAxisSize.min,
@@ -56,7 +56,7 @@ class HomeCarouselTypeTwo extends StatelessWidget {
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
                             color: AppColor.spotifyWhite,
-                            fontSize: 10,
+                            fontSize: 13,
                           ),
                         ),
                       ],

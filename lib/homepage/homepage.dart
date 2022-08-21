@@ -6,7 +6,7 @@ import 'package:spotify_clone/homepage/components/card_home_top_page.dart';
 import 'package:spotify_clone/homepage/components/head_home_page.dart';
 import 'package:spotify_clone/homepage/components/home_carousel_typeOne.dart';
 import 'package:spotify_clone/homepage/components/home_carousel_typeTwo.dart';
-import 'package:spotify_clone/homepage/components/regular_text.dart';
+import 'package:spotify_clone/homepage/components/profile_card.dart';
 import 'package:spotify_clone/homepage/components/single_song_profile_card.dart';
 
 class HomePage extends StatefulWidget {
@@ -29,56 +29,47 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      body: Stack(
-        children: [
-          Container(
-            height: ResSize.screenHeight,
-            decoration: BoxDecoration(
-              gradient: RadialGradient(
-                center: Alignment.topLeft,
-                radius: 1.25,
-                colors: [
-                  AppColor.homeTopGradient1.withOpacity(1),
-                  AppColor.homeTopGradient2.withOpacity(0.6),
-                  AppColor.homeTopGradient3.withOpacity(0.3),
-                  AppColor.homeTopGradient4.withOpacity(0.1),
-                ],
+      body: SingleChildScrollView(
+        child: Stack(
+          children: [
+            Container(
+              height: ResSize.screenHeight,
+              decoration: BoxDecoration(
+                gradient: RadialGradient(
+                  center: Alignment.topLeft,
+                  radius: 1.25,
+                  colors: [
+                    AppColor.homeTopGradient1.withOpacity(1),
+                    AppColor.homeTopGradient2.withOpacity(0.6),
+                    AppColor.homeTopGradient3.withOpacity(0.3),
+                    AppColor.homeTopGradient4.withOpacity(0.1),
+                  ],
+                ),
               ),
             ),
-          ),
-          Container(
-            height: ResSize.screenHeight,
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                // center: Alignment.topLeft,
-                // radius: 1.25,
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  AppColor.homeTopGradient1.withOpacity(0.4),
-                  AppColor.homeTopGradient2.withOpacity(0.05),
-                  AppColor.homeTopGradient3.withOpacity(0),
-                  AppColor.homeTopGradient4.withOpacity(0),
-                ],
+            Container(
+              height: ResSize.screenHeight,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    AppColor.homeTopGradient1.withOpacity(0.4),
+                    AppColor.homeTopGradient2.withOpacity(0.05),
+                    AppColor.homeTopGradient3.withOpacity(0),
+                    AppColor.homeTopGradient4.withOpacity(0),
+                  ],
+                ),
               ),
             ),
-          ),
-          SingleChildScrollView(
-            child: Column(
+            Column(
               children: [
-                // SizedBox(height: 30),
                 Container(
-                  padding: EdgeInsets.only(
-                    top: 30,
-                    bottom: 5,
-                    left: 8,
-                  ),
+                  padding: EdgeInsets.only(top: 55, bottom: 10, left: 8),
                   child: HeadHomePage(text: "Good Evening"),
                 ),
-                // SizedBox(height: 5),
                 Column(
-                  children: List.generate((homeTopCardOne.length / 2).toInt(),
-                      (index) {
+                  children: List.generate(homeTopCardOne.length ~/ 2, (index) {
                     return Container(
                       padding: const EdgeInsets.only(bottom: 10),
                       width: ResSize.screenWidth - 30,
@@ -87,11 +78,13 @@ class _HomePageState extends State<HomePage> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           CardHomeTopPage(
-                              img: homeTopCardOne[index * 2]["img"],
-                              text: homeTopCardOne[index * 2]["title"]),
+                            img: homeTopCardOne[index * 2]["img"],
+                            text: homeTopCardOne[index * 2]["title"],
+                          ),
                           CardHomeTopPage(
-                              img: homeTopCardOne[(index * 2) + 1]["img"],
-                              text: homeTopCardOne[(index * 2) + 1]["title"]),
+                            img: homeTopCardOne[(index * 2) + 1]["img"],
+                            text: homeTopCardOne[(index * 2) + 1]["title"],
+                          ),
                         ],
                       ),
                     );
@@ -99,7 +92,12 @@ class _HomePageState extends State<HomePage> {
                 ),
                 SizedBox(height: 50),
                 // * Card with profile and card
-                SingleCardWithPlayerProfile(),
+                ProfileCard(
+                  imgAdd: 'assets/images/home/Pic.png',
+                  artistName: 'Dan Lewis',
+                  titlePart: "new release from",
+                ),
+                SingleCard(),
                 SizedBox(height: 20),
                 HomeCarouselTypeOne(
                   listing: homeCarouselTypeOne,
@@ -112,11 +110,24 @@ class _HomePageState extends State<HomePage> {
                 HomeCarouselTypeTwo(
                   heading: "More of what you like",
                   listing: homeCarouselTypeTwo,
-                )
+                ),
+                HomeCarouselTypeTwo(
+                  heading: "Your top mixes",
+                  listing: homeCarouselTypeTwo2,
+                ),
+                ProfileCard(
+                  imgAdd: 'assets/images/home/Pic.png',
+                  artistName: 'Kodaline',
+                  titlePart: 'more like',
+                ),
+                HomeCarouselTypeTwo(
+                  heading: "",
+                  listing: homeCarouselTypeTwo3,
+                ),
               ],
             ),
-          )
-        ],
+          ],
+        ),
       ),
     );
   }

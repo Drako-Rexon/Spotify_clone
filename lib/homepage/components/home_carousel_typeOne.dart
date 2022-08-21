@@ -25,7 +25,7 @@ class HomeCarouselTypeOne extends StatelessWidget {
         ),
         Container(
           margin: EdgeInsets.symmetric(horizontal: 10),
-          height: 210,
+          height: 240,
           child: ListView.builder(
             itemCount: 5,
             scrollDirection: Axis.horizontal,
@@ -36,8 +36,8 @@ class HomeCarouselTypeOne extends StatelessWidget {
                       children: [
                         Container(
                           margin: EdgeInsets.all(10),
-                          width: 150,
-                          height: 150,
+                          width: 190,
+                          height: 190,
                           decoration: BoxDecoration(
                             image: DecorationImage(
                               fit: BoxFit.cover,
@@ -46,7 +46,7 @@ class HomeCarouselTypeOne extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          width: 150,
+                          width: 190,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             // mainAxisSize: MainAxisSize.min,
@@ -57,7 +57,7 @@ class HomeCarouselTypeOne extends StatelessWidget {
                                 overflow: TextOverflow.ellipsis,
                                 style: TextStyle(
                                   color: AppColor.spotifyWhite,
-                                  fontSize: 10,
+                                  fontSize: 13,
                                 ),
                               ),
                             ],
@@ -70,17 +70,16 @@ class HomeCarouselTypeOne extends StatelessWidget {
                       children: [
                         Container(
                           margin: EdgeInsets.all(10),
-                          width: 150,
-                          height: 150,
+                          width: 190,
+                          height: 190,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              fit: BoxFit.cover,
-                              image: AssetImage(listing[index]["img"]),
-                            ),
+                                fit: BoxFit.cover,
+                                image: AssetImage(listing[index]["img"])),
                           ),
                         ),
                         Container(
-                          width: 150,
+                          width: 190,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             // mainAxisSize: MainAxisSize.min,
@@ -90,9 +89,7 @@ class HomeCarouselTypeOne extends StatelessWidget {
                                 maxLines: 1,
                                 overflow: TextOverflow.ellipsis,
                                 style: TextStyle(
-                                  color: AppColor.spotifyWhite,
-                                  fontSize: 10,
-                                ),
+                                    color: AppColor.spotifyWhite, fontSize: 13),
                               ),
                               Row(
                                 children: [
@@ -101,9 +98,8 @@ class HomeCarouselTypeOne extends StatelessWidget {
                                     maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
                                     style: TextStyle(
-                                      color: AppColor.spotifyWhite,
-                                      fontSize: 10,
-                                    ),
+                                        color: AppColor.spotifyWhite,
+                                        fontSize: 10),
                                   ),
                                   SizedBox(width: 4),
                                   Icon(
@@ -117,9 +113,8 @@ class HomeCarouselTypeOne extends StatelessWidget {
                                     maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
                                     style: TextStyle(
-                                      color: AppColor.spotifyWhite,
-                                      fontSize: 10,
-                                    ),
+                                        color: AppColor.spotifyWhite,
+                                        fontSize: 10),
                                   ),
                                 ],
                               ),

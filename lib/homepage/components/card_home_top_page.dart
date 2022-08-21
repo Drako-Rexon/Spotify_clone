@@ -10,6 +10,7 @@ class CardHomeTopPage extends StatelessWidget {
   }) : super(key: key);
   final String text;
   final String img;
+  
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -50,14 +51,7 @@ class CardHomeTopPage extends StatelessWidget {
               ),
             ],
           ),
-          IconButton(
-            onPressed: () {},
-            icon: Icon(
-              Icons.more_horiz,
-              size: 18,
-              color: AppColor.spotifyWhite,
-            ),
-          ),
+          
         ],
       ),
     );
