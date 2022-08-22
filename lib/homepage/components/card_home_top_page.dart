@@ -43,7 +43,7 @@ class CardHomeTopPage extends StatelessWidget {
                 child: Text(
                   text,
                   style: TextStyle(
-                    fontSize: 9,
+                    fontSize: 10,
                     fontWeight: FontWeight.bold,
                     color: AppColor.spotifyWhite,
                   ),

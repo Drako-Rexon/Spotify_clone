@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/components/colors.dart';
 import 'package:spotify_clone/homepage/homepage.dart';
+import 'package:spotify_clone/Search/search.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -42,14 +43,7 @@ class _HomeState extends State<Home> {
       index: activeTab,
       children: const [
         HomePage(),
-        Center(
-          child: Text(
-            'Search',
-            style: TextStyle(
-              color: Colors.white,
-            ),
-          ),
-        ),
+        SearchPage(),
         Center(
           child: Text(
             'Library',

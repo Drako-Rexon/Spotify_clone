@@ -3,29 +3,37 @@ import 'package:spotify_clone/components/colors.dart';
 import 'package:spotify_clone/homepage/components/regular_text.dart';
 
 class HomeCarouselTypeTwo extends StatelessWidget {
-  const HomeCarouselTypeTwo({
+  HomeCarouselTypeTwo({
     Key? key,
-    required this.heading,
+    this.heading = "",
+    this.head = true,
     required this.listing,
   }) : super(key: key);
   final String heading;
   final List listing;
+  bool head;
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
+        head
+            ? Container(
+                padding: EdgeInsets.all(20),
+                alignment: Alignment.centerLeft,
+                child: RegularText(
+                  text: heading,
+                  textSize: 18,
+                  isBold: true,
+                ),
+              )
+            : Container(),
         Container(
-          padding: EdgeInsets.all(20),
-          alignment: Alignment.centerLeft,
-          child: RegularText(
-            text: heading,
-            textSize: 18,
-            isBold: true,
+          margin: EdgeInsets.only(
+            left: 10,
+            right: 10,
+            bottom: 40,
           ),
-        ),
-        Container(
-          margin: EdgeInsets.symmetric(horizontal: 10),
-          height: 240,
+          height: 200,
           child: ListView.builder(
             itemCount: 5,
             scrollDirection: Axis.horizontal,
@@ -35,8 +43,8 @@ class HomeCarouselTypeTwo extends StatelessWidget {
                 children: [
                   Container(
                     margin: EdgeInsets.all(10),
-                    width: 190,
-                    height: 190,
+                    width: 150,
+                    height: 150,
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         fit: BoxFit.cover,
@@ -45,7 +53,7 @@ class HomeCarouselTypeTwo extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    width: 190,
+                    width: 150,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       // mainAxisSize: MainAxisSize.min,

@@ -39,10 +39,10 @@ class _HomePageState extends State<HomePage> {
                   center: Alignment.topLeft,
                   radius: 1.25,
                   colors: [
-                    AppColor.homeTopGradient1.withOpacity(1),
-                    AppColor.homeTopGradient2.withOpacity(0.6),
-                    AppColor.homeTopGradient3.withOpacity(0.3),
-                    AppColor.homeTopGradient4.withOpacity(0.1),
+                    homeGradientTop[0].withOpacity(1),
+                    homeGradientTop[1].withOpacity(0.6),
+                    homeGradientTop[2].withOpacity(0.3),
+                    homeGradientTop[3].withOpacity(0.1),
                   ],
                 ),
               ),
@@ -54,10 +54,10 @@ class _HomePageState extends State<HomePage> {
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
-                    AppColor.homeTopGradient1.withOpacity(0.4),
-                    AppColor.homeTopGradient2.withOpacity(0.05),
-                    AppColor.homeTopGradient3.withOpacity(0),
-                    AppColor.homeTopGradient4.withOpacity(0),
+                    homeGradientTop[0].withOpacity(0.4),
+                    homeGradientTop[1].withOpacity(0.05),
+                    homeGradientTop[2].withOpacity(0),
+                    homeGradientTop[3].withOpacity(0),
                   ],
                 ),
               ),
@@ -90,13 +90,20 @@ class _HomePageState extends State<HomePage> {
                     );
                   }),
                 ),
-                SizedBox(height: 50),
+                SizedBox(height: 30),
                 // * Card with profile and card
-                ProfileCard(
-                  imgAdd: 'assets/images/home/Pic.png',
-                  artistName: 'Dan Lewis',
-                  titlePart: "new release from",
+                Padding(
+                  padding: const EdgeInsets.only(
+                    left: 20,
+                    bottom: 20,
+                  ),
+                  child: ProfileCard(
+                    imgAdd: 'assets/images/home/Pic.png',
+                    artistName: 'Dan Lewis',
+                    titlePart: "new release from",
+                  ),
                 ),
+
                 SingleCard(),
                 SizedBox(height: 20),
                 HomeCarouselTypeOne(
@@ -115,14 +122,28 @@ class _HomePageState extends State<HomePage> {
                   heading: "Your top mixes",
                   listing: homeCarouselTypeTwo2,
                 ),
-                ProfileCard(
-                  imgAdd: 'assets/images/home/Pic.png',
-                  artistName: 'Kodaline',
-                  titlePart: 'more like',
+                Padding(
+                  padding: const EdgeInsets.only(
+                    left: 20,
+                    bottom: 10,
+                  ),
+                  child: ProfileCard(
+                    imgAdd: 'assets/images/home/carousel5/1.png',
+                    artistName: 'Kodaline',
+                    titlePart: 'more like',
+                  ),
                 ),
                 HomeCarouselTypeTwo(
-                  heading: "",
+                  head: false,
                   listing: homeCarouselTypeTwo3,
+                ),
+                HomeCarouselTypeTwo(
+                  heading: "Uniquely yours",
+                  listing: homeCarouselTypeTwo4,
+                ),
+                HomeCarouselTypeTwo(
+                  heading: "Jump back in",
+                  listing: homeCarouselTypeTwo5,
                 ),
               ],
             ),

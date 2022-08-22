@@ -15,7 +15,11 @@ class HomeCarouselTypeOne extends StatelessWidget {
     return Column(
       children: [
         Container(
-          padding: EdgeInsets.all(20),
+          padding: EdgeInsets.only(
+            left: 20,
+            right: 20,
+            bottom: 40,
+          ),
           alignment: Alignment.centerLeft,
           child: RegularText(
             text: heading,
@@ -25,7 +29,7 @@ class HomeCarouselTypeOne extends StatelessWidget {
         ),
         Container(
           margin: EdgeInsets.symmetric(horizontal: 10),
-          height: 240,
+          height: 200,
           child: ListView.builder(
             itemCount: 5,
             scrollDirection: Axis.horizontal,
@@ -36,8 +40,8 @@ class HomeCarouselTypeOne extends StatelessWidget {
                       children: [
                         Container(
                           margin: EdgeInsets.all(10),
-                          width: 190,
-                          height: 190,
+                          width: 150,
+                          height: 150,
                           decoration: BoxDecoration(
                             image: DecorationImage(
                               fit: BoxFit.cover,
@@ -46,7 +50,7 @@ class HomeCarouselTypeOne extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          width: 190,
+                          width: 150,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             // mainAxisSize: MainAxisSize.min,
@@ -70,8 +74,8 @@ class HomeCarouselTypeOne extends StatelessWidget {
                       children: [
                         Container(
                           margin: EdgeInsets.all(10),
-                          width: 190,
-                          height: 190,
+                          width: 150,
+                          height: 150,
                           decoration: BoxDecoration(
                             image: DecorationImage(
                                 fit: BoxFit.cover,
@@ -79,7 +83,7 @@ class HomeCarouselTypeOne extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          width: 190,
+                          width: 150,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             // mainAxisSize: MainAxisSize.min,

@@ -339,3 +339,49 @@ List homeCarouselTypeTwo3 = [
     "title": "Yo-Yo Ma, Ludovico Einaudi, Alexis Ffrench, Daniel Hope, Yi..."
   },
 ];
+List homeCarouselTypeTwo4 = [
+  {
+    "img": "assets/images/home/carousel6/1.png",
+    "title":
+        "Maverick City Music, Hillsong UNITED, Hillsong Worship, Better Music"
+  },
+  {
+    "img": "assets/images/home/carousel6/2.png",
+    "title": "Ed Sheeran, Passenger, Justin Bieber, Dean Lewis, Taylor Swift"
+  },
+  {
+    "img": "assets/images/home/carousel6/3.png",
+    "title": "Yo-Yo Ma, Ludovico Einaudi, Alexis Ffrench, Daniel Hope, Yi..."
+  },
+  {
+    "img": "assets/images/home/carousel6/4.png",
+    "title": "Ed Sheeran, Passenger, Justin Bieber, Dean Lewis, Taylor Swift"
+  },
+  {
+    "img": "assets/images/home/carousel6/5.png",
+    "title": "Yo-Yo Ma, Ludovico Einaudi, Alexis Ffrench, Daniel Hope, Yi..."
+  },
+];
+List homeCarouselTypeTwo5 = [
+  {
+    "img": "assets/images/home/carousel7/1.png",
+    "title":
+        "Maverick City Music, Hillsong UNITED, Hillsong Worship, Better Music"
+  },
+  {
+    "img": "assets/images/home/carousel7/2.png",
+    "title": "Ed Sheeran, Passenger, Justin Bieber, Dean Lewis, Taylor Swift"
+  },
+  {
+    "img": "assets/images/home/carousel7/3.png",
+    "title": "Yo-Yo Ma, Ludovico Einaudi, Alexis Ffrench, Daniel Hope, Yi..."
+  },
+  {
+    "img": "assets/images/home/carousel7/4.png",
+    "title": "Ed Sheeran, Passenger, Justin Bieber, Dean Lewis, Taylor Swift"
+  },
+  {
+    "img": "assets/images/home/carousel7/5.png",
+    "title": "Yo-Yo Ma, Ludovico Einaudi, Alexis Ffrench, Daniel Hope, Yi..."
+  },
+];
