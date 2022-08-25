@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:spotify_clone/Search/components/search_cards.dart';
 import 'package:spotify_clone/components/colors.dart';
 import 'package:spotify_clone/components/res_size.dart';
+import 'package:spotify_clone/components/sample_song_json.dart';
 import 'package:spotify_clone/homepage/components/regular_text.dart';
 
 class SearchPage extends StatelessWidget {
@@ -56,6 +58,11 @@ class SearchPage extends StatelessWidget {
               ),
               SizedBox(height: 20),
               // todo: cards
+              SearchCards(
+                contHeight: 240,
+                costList: topGenres,
+                count: 2,
+              ),
               SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.only(left: 15),

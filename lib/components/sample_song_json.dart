@@ -385,3 +385,12 @@ List homeCarouselTypeTwo5 = [
     "title": "Yo-Yo Ma, Ludovico Einaudi, Alexis Ffrench, Daniel Hope, Yi..."
   },
 ];
+
+// ! Search page JSONs
+
+List topGenres = [
+  'assets/images/search/topGenres/Pop.png',
+  'assets/images/search/topGenres/Christian&Gospel.png',
+  'assets/images/search/topGenres/Indie.png',
+  'assets/images/search/topGenres/Rock.png',
+];

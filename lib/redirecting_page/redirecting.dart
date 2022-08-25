@@ -11,7 +11,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  int activeTab = 0;
+  int activeTab = 1;
   List navIconOn = [
     // NavIcons.state_on_2,
     // NavIcons.state_on_1,
