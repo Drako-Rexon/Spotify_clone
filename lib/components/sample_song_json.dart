@@ -394,3 +394,17 @@ List topGenres = [
   'assets/images/search/topGenres/Indie.png',
   'assets/images/search/topGenres/Rock.png',
 ];
+List browseAll = [
+  'assets/images/search/browseAll/Afro.png',
+  'assets/images/search/browseAll/Alternative.png',
+  'assets/images/search/browseAll/Charts.png',
+  'assets/images/search/browseAll/Decades.png',
+  'assets/images/search/browseAll/Discover.png',
+  'assets/images/search/browseAll/Electronic.png',
+  'assets/images/search/browseAll/EQUAL.png',
+  'assets/images/search/browseAll/Experience EQUALS.png',
+  'assets/images/search/browseAll/Focus.png',
+  'assets/images/search/browseAll/Frequency.png',
+  'assets/images/search/browseAll/Hip Hop.png',
+  'assets/images/search/browseAll/Live Events.png',
+];

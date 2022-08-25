@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/Search/components/search_cards.dart';
 import 'package:spotify_clone/components/colors.dart';
@@ -12,8 +13,9 @@ class SearchPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColor.spotifyBlack,
-      body: SafeArea(
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -35,12 +37,38 @@ class SearchPage extends StatelessWidget {
                       color: AppColor.spotifyWhite,
                       borderRadius: BorderRadius.circular(6)),
                   child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 8),
-                        child: Icon(
-                          Icons.search,
-                          size: 34,
+                      // Padding(
+                      //   padding: const EdgeInsets.only(left: 8),
+                      //   child: Icon(Icons.search, size: 34),
+                      // ),
+                      SizedBox(
+                        width: ResSize.screenWidth - 80,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 8),
+                          child: TextField(
+                            dragStartBehavior: DragStartBehavior.start,
+                            showCursor: true,
+                            cursorColor: AppColor.spotifyBlack,
+                            cursorHeight: 20,
+                            decoration: InputDecoration(
+                              prefixIcon: Icon(
+                                Icons.search,
+                                size: 34,
+                                color: AppColor.spotifyBlack,
+                              ),
+                              border: InputBorder.none,
+                              contentPadding: const EdgeInsets.only(
+                                top: 12,
+                                left: 10,
+                              ),
+                              hintText: " Artists, songs, or podcasts",
+                              hintStyle: TextStyle(
+                                color: Colors.grey,
+                              ),
+                            ),
+                          ),
                         ),
                       ),
                     ],
@@ -57,11 +85,10 @@ class SearchPage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-              // todo: cards
               SearchCards(
-                contHeight: 240,
+                contHeight: ((topGenres.length) ~/ 2) * 120,
                 costList: topGenres,
-                count: 2,
+                count: (topGenres.length) ~/ 2,
               ),
               SizedBox(height: 20),
               Padding(
@@ -71,6 +98,11 @@ class SearchPage extends StatelessWidget {
                   isBold: true,
                   textSize: 14,
                 ),
+              ),
+              SearchCards(
+                contHeight: ((browseAll.length) ~/ 2) * 120,
+                costList: browseAll,
+                count: (browseAll.length) ~/ 2,
               ),
               SizedBox(height: 20),
             ],

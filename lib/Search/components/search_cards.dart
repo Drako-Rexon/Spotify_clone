@@ -17,6 +17,7 @@ class SearchCards extends StatelessWidget {
     return Container(
       height: contHeight,
       child: ListView.builder(
+        physics: const NeverScrollableScrollPhysics(),
         itemCount: count,
         itemBuilder: (context, index) => Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,

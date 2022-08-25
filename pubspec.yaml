@@ -68,6 +68,7 @@ flutter:
     - assets/images/home/
     - assets/images/search/
     - assets/images/search/topGenres/
+    - assets/images/search/browseAll/
     - assets/fonts/
   #   - images/a_dot_ham.jpeg
 
