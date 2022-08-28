@@ -11,14 +11,19 @@ class HomeCarouselTypeTwo extends StatelessWidget {
   }) : super(key: key);
   final String heading;
   final List listing;
-  bool head;
+  final bool head;
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         head
             ? Container(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.only(
+                  top: 40,
+                  left: 20,
+                  right: 20,
+                  bottom: 15,
+                ),
                 alignment: Alignment.centerLeft,
                 child: RegularText(
                   text: heading,
@@ -31,7 +36,6 @@ class HomeCarouselTypeTwo extends StatelessWidget {
           margin: EdgeInsets.only(
             left: 10,
             right: 10,
-            bottom: 40,
           ),
           height: 200,
           child: ListView.builder(
@@ -56,7 +60,6 @@ class HomeCarouselTypeTwo extends StatelessWidget {
                     width: 150,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      // mainAxisSize: MainAxisSize.min,
                       children: [
                         Text(
                           listing[index]["title"],
@@ -64,7 +67,7 @@ class HomeCarouselTypeTwo extends StatelessWidget {
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
                             color: AppColor.spotifyWhite,
-                            fontSize: 13,
+                            fontSize: 12,
                           ),
                         ),
                       ],

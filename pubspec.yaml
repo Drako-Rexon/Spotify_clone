@@ -66,6 +66,13 @@ flutter:
   assets:
     - assets/images/
     - assets/images/home/
+    - assets/images/home/carousel1/
+    - assets/images/home/carousel2/
+    - assets/images/home/carousel3/
+    - assets/images/home/carousel4/
+    - assets/images/home/carousel5/
+    - assets/images/home/carousel6/
+    - assets/images/home/carousel7/
     - assets/images/search/
     - assets/images/search/topGenres/
     - assets/images/search/browseAll/

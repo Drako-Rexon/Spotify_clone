@@ -65,7 +65,7 @@ class SearchPage extends StatelessWidget {
                               ),
                               hintText: " Artists, songs, or podcasts",
                               hintStyle: TextStyle(
-                                color: Colors.grey,
+                                color: Colors.grey
                               ),
                             ),
                           ),

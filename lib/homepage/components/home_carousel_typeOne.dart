@@ -16,9 +16,10 @@ class HomeCarouselTypeOne extends StatelessWidget {
       children: [
         Container(
           padding: EdgeInsets.only(
+            top: 40,
             left: 20,
             right: 20,
-            bottom: 40,
+            bottom: 15,
           ),
           alignment: Alignment.centerLeft,
           child: RegularText(
@@ -61,7 +62,7 @@ class HomeCarouselTypeOne extends StatelessWidget {
                                 overflow: TextOverflow.ellipsis,
                                 style: TextStyle(
                                   color: AppColor.spotifyWhite,
-                                  fontSize: 13,
+                                  fontSize: 12,
                                 ),
                               ),
                             ],
@@ -93,7 +94,9 @@ class HomeCarouselTypeOne extends StatelessWidget {
                                 maxLines: 1,
                                 overflow: TextOverflow.ellipsis,
                                 style: TextStyle(
-                                    color: AppColor.spotifyWhite, fontSize: 13),
+                                  color: AppColor.spotifyWhite,
+                                  fontSize: 12,
+                                ),
                               ),
                               Row(
                                 children: [
@@ -117,8 +120,9 @@ class HomeCarouselTypeOne extends StatelessWidget {
                                     maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
                                     style: TextStyle(
-                                        color: AppColor.spotifyWhite,
-                                        fontSize: 10),
+                                      color: AppColor.spotifyWhite,
+                                      fontSize: 10,
+                                    ),
                                   ),
                                 ],
                               ),

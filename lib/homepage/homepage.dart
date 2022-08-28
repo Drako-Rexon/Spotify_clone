@@ -103,9 +103,8 @@ class _HomePageState extends State<HomePage> {
                     titlePart: "new release from",
                   ),
                 ),
-
                 SingleCard(),
-                SizedBox(height: 20),
+                SizedBox(height: 10),
                 HomeCarouselTypeOne(
                   listing: homeCarouselTypeOne,
                   heading: "Discover something new",
@@ -124,7 +123,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(
-                    left: 20,
+                    left: 20,top: 20,
                     bottom: 10,
                   ),
                   child: ProfileCard(

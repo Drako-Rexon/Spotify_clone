@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:spotify_clone/components/colors.dart';
 import 'package:spotify_clone/homepage/homepage.dart';
 import 'package:spotify_clone/Search/search.dart';
+import 'package:spotify_clone/library_page/library.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -11,7 +12,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  int activeTab = 1;
+  int activeTab = 2;
   List navIconOn = [
     // NavIcons.state_on_2,
     // NavIcons.state_on_1,
@@ -44,14 +45,16 @@ class _HomeState extends State<Home> {
       children: const [
         HomePage(),
         SearchPage(),
-        Center(
-          child: Text(
-            'Library',
-            style: TextStyle(
-              color: Colors.white,
-            ),
-          ),
-        ),
+        LibraryPage(),
+        // AlbumPage(),
+        // Center(
+        //   child: Text(
+        //     'Library',
+        //     style: TextStyle(
+        //       color: Colors.white,
+        //     ),
+        //   ),
+        // ),
       ],
     );
   }
