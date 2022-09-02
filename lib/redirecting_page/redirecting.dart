@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/components/colors.dart';
+import 'package:spotify_clone/components/res_size.dart';
 import 'package:spotify_clone/homepage/homepage.dart';
 import 'package:spotify_clone/Search/search.dart';
 import 'package:spotify_clone/library_page/library.dart';
@@ -14,20 +15,14 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   int activeTab = 2;
   List navIconOn = [
-    // NavIcons.state_on_2,
-    // NavIcons.state_on_1,
-    // NavIcons.state_on
     Icons.home,
     Icons.home,
     Icons.home,
   ];
   List navIconOff = [
-    // NavIcons.state_off_2,
-    // NavIcons.state_off_1,
-    // NavIcons.state_off
-    Icons.home,
-    Icons.home,
-    Icons.home,
+    Icons.home_outlined,
+    Icons.home_outlined,
+    Icons.home_outlined,
   ];
 
   @override
@@ -46,15 +41,6 @@ class _HomeState extends State<Home> {
         HomePage(),
         SearchPage(),
         LibraryPage(),
-        // AlbumPage(),
-        // Center(
-        //   child: Text(
-        //     'Library',
-        //     style: TextStyle(
-        //       color: Colors.white,
-        //     ),
-        //   ),
-        // ),
       ],
     );
   }
@@ -63,16 +49,25 @@ class _HomeState extends State<Home> {
     return Container(
       height: 60,
       decoration: BoxDecoration(
-        color: AppColor.spotifyBlack.withOpacity(0.5),
+        gradient: LinearGradient(
+          colors: [
+            AppColor.spotifyBlack,
+            AppColor.spotifyBlack.withOpacity(0.6),
+            AppColor.spotifyBlack.withOpacity(0.2),
+            Color.fromARGB(0, 255, 255, 255),
+          ],
+          begin: Alignment.centerLeft,
+          end: Alignment.topCenter,
+        ),
       ),
-      width: MediaQuery.of(context).size.width,
+      width: ResSize.screenWidth,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: List.generate(navIconOn.length, (index) {
           return IconButton(
             icon: Icon(
-              activeTab == index ? navIconOff[index] : navIconOn[index],
+              activeTab == index ? navIconOn[index] : navIconOff[index],
               color: AppColor.spotifyWhite,
               size: 36,
             ),

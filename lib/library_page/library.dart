@@ -14,45 +14,122 @@ class LibraryPage extends StatelessWidget {
         shadowColor: Colors.black,
         elevation: 4,
         titleSpacing: 0,
-        leading: Icon(Icons.ac_unit_sharp),
-        title: RegularText(
-          text: "Your Library",
-          textSize: 18,
-          isBold: true,
-        ),
-        actions: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              children: [
-                Icon(
-                  Icons.search,
-                  size: 30,
-                ),
-                SizedBox(width: 5),
-                Icon(
-                  Icons.add,
-                  size: 30,
-                ),
-              ],
-            ),
-          ),
-        ],
         bottom: PreferredSize(
-          child: Flex(
-            direction: Axis.horizontal,
+          preferredSize: Size.fromHeight(150),
+          child: Column(
             children: [
-              Column(
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  FlatButton(
+                  Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10, right: 6),
+                        child: Icon(
+                          Icons.ac_unit_sharp,
+                          color: AppColor.spotifyWhite,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8),
+                        child: RegularText(
+                          text: "Your Library",
+                          textSize: 18,
+                          isBold: true,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Icon(
+                        Icons.search,
+                        size: 33,
+                        color: AppColor.spotifyWhite,
+                      ),
+                      SizedBox(width: 8),
+                      Icon(
+                        Icons.add,
+                        size: 35,
+                        color: AppColor.spotifyWhite,
+                      ),
+                      SizedBox(width: 5),
+                    ],
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  SizedBox(width: 10),
+                  TextButton(
+                    style: ButtonStyle(
+                      padding: MaterialStateProperty.all(
+                        const EdgeInsets.only(left: 8, right: 8),
+                      ),
+                      shape: MaterialStateProperty.all(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                      ),
+                      side: MaterialStateProperty.all(
+                        BorderSide(color: AppColor.spotifyWhite),
+                      ),
+                    ),
                     onPressed: () {},
-                    child: RegularText(text: "data"),
+                    child: RegularText(
+                      text: "Playlists",
+                      textSize: 10,
+                    ),
+                  ),
+                  SizedBox(width: 16),
+                  TextButton(
+                    style: ButtonStyle(
+                      padding: MaterialStateProperty.all(
+                        const EdgeInsets.only(left: 8, right: 8),
+                      ),
+                      shape: MaterialStateProperty.all(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                      ),
+                      side: MaterialStateProperty.all(
+                        BorderSide(color: AppColor.spotifyWhite),
+                      ),
+                    ),
+                    onPressed: () {},
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 8, right: 8),
+                      child: RegularText(
+                        text: "Playlists",
+                        textSize: 10,
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 16),
+                  TextButton(
+                    style: ButtonStyle(
+                      padding: MaterialStateProperty.all(
+                        const EdgeInsets.only(left: 8, right: 8),
+                      ),
+                      shape: MaterialStateProperty.all(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                      ),
+                      side: MaterialStateProperty.all(
+                        BorderSide(color: AppColor.spotifyWhite),
+                      ),
+                    ),
+                    onPressed: () {},
+                    child: RegularText(
+                      text: "Playlists",
+                      textSize: 10,
+                    ),
                   ),
                 ],
               ),
             ],
           ),
-          preferredSize: Size.fromHeight(250),
         ),
       ),
     );
