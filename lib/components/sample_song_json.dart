@@ -408,3 +408,15 @@ List browseAll = [
   'assets/images/search/browseAll/Hip Hop.png',
   'assets/images/search/browseAll/Live Events.png',
 ];
+List libraryTiles = [
+  {"title": "Liked Songs", "type": "Playlist", "songNo": "266"},
+  {"title": "Emotional Songs", "type": "Playlist", "Artist": "Jhesy"},
+  {"title": "Augustten Ft Jhesy😇", "type": "Playlist", "Artist": "Jhesy"},
+  {
+    "title": "All the Little Lights (Deluxe Version)",
+    "type": "Album",
+    "Artist": "Passenger"
+  },
+  {"title": "Emotional Songs", "type": "Playlist", "Artist": "Jhesy"},
+  {"title": "Emotional Songs", "type": "Playlist", "Artist": "Jhesy"},
+];

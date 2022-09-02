@@ -37,7 +37,7 @@ class _HomeState extends State<Home> {
   Widget getBody() {
     return IndexedStack(
       index: activeTab,
-      children: const [
+      children: [
         HomePage(),
         SearchPage(),
         LibraryPage(),

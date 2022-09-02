@@ -39,10 +39,6 @@ class SearchPage extends StatelessWidget {
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      // Padding(
-                      //   padding: const EdgeInsets.only(left: 8),
-                      //   child: Icon(Icons.search, size: 34),
-                      // ),
                       SizedBox(
                         width: ResSize.screenWidth - 80,
                         child: Padding(
@@ -64,9 +60,7 @@ class SearchPage extends StatelessWidget {
                                 left: 10,
                               ),
                               hintText: " Artists, songs, or podcasts",
-                              hintStyle: TextStyle(
-                                color: Colors.grey
-                              ),
+                              hintStyle: TextStyle(color: Colors.grey),
                             ),
                           ),
                         ),
