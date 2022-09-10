@@ -9,14 +9,14 @@ class MusicPlayer extends StatefulWidget {
   final String img;
   final String songUrl;
 
-  const MusicPlayer(
-      {Key? key,
-      required this.title,
-      required this.description,
-      required this.color,
-      required this.img,
-      required this.songUrl})
-      : super(key: key);
+  const MusicPlayer({
+    Key? key,
+    required this.title,
+    required this.description,
+    required this.color,
+    required this.img,
+    required this.songUrl,
+  }) : super(key: key);
 
   @override
   State<MusicPlayer> createState() => _MusicPlayerState();

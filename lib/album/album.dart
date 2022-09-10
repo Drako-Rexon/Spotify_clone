@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:spotify_clone/components/sample_song_json.dart';
+import 'package:spotify_clone/_components/sample_song_json.dart';
 import 'package:spotify_clone/player/player.dart';
 
 var primary = const Color(0xFF1ed661);

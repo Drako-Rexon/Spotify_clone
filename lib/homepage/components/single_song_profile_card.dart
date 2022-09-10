@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_clone/components/colors.dart';
-import 'package:spotify_clone/components/res_size.dart';
+import 'package:spotify_clone/_components/colors.dart';
+import 'package:spotify_clone/_components/res_size.dart';
 import 'package:spotify_clone/homepage/components/regular_text.dart';
 
 class SingleCard extends StatefulWidget {

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppColor {
   static final Color spotifyGreen = Color(0xFF1ED760);
+  static final Color spotifyLightGreen = Color(0xFF1ED760);
   static final Color spotifyWhite = Colors.white;
   static final Color spotifyBlack = Color(0xFF121212);
   static final Color homeTopGradient1 = Color(0xFF3B13B0);

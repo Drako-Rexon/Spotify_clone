@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_clone/components/colors.dart';
-import 'package:spotify_clone/components/res_size.dart';
-import 'package:spotify_clone/components/sample_song_json.dart';
+import 'package:spotify_clone/_components/colors.dart';
+import 'package:spotify_clone/_components/res_size.dart';
+import 'package:spotify_clone/_components/sample_song_json.dart';
 import 'package:spotify_clone/homepage/components/card_home_top_page.dart';
 import 'package:spotify_clone/homepage/components/head_home_page.dart';
 import 'package:spotify_clone/homepage/components/home_carousel_typeOne.dart';

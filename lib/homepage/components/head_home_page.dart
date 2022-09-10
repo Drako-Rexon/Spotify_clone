@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_clone/components/colors.dart';
+import 'package:spotify_clone/_components/colors.dart';
 import 'package:spotify_clone/homepage/components/regular_text.dart';
 import 'package:unicons/unicons.dart';
 

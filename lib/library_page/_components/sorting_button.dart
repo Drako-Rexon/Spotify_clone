@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_clone/components/colors.dart';
+import 'package:spotify_clone/_components/colors.dart';
 import 'package:spotify_clone/homepage/components/regular_text.dart';
 
 class SortingButtons extends StatefulWidget {
@@ -22,7 +22,7 @@ class _SortingButtonsState extends State<SortingButtons> {
       style: ButtonStyle(
         overlayColor: MaterialStateProperty.all(Colors.transparent),
         backgroundColor: onOrOff
-            ? MaterialStateProperty.all(Colors.amber)
+            ? MaterialStateProperty.all(AppColor.spotifyGreen)
             : MaterialStateProperty.all(AppColor.spotifyBlack),
         padding: MaterialStateProperty.all(
           const EdgeInsets.only(left: 8, right: 8),
@@ -32,9 +32,13 @@ class _SortingButtonsState extends State<SortingButtons> {
             borderRadius: BorderRadius.circular(16),
           ),
         ),
-        side: MaterialStateProperty.all(
-          BorderSide(color: AppColor.spotifyWhite),
-        ),
+        side: onOrOff
+            ? MaterialStateProperty.all(
+                BorderSide(color: AppColor.spotifyWhite),
+              )
+            : MaterialStateProperty.all(
+                BorderSide(color: AppColor.spotifyWhite),
+              ),
       ),
       onPressed: () {
         setState(() {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_clone/components/colors.dart';
-import 'package:spotify_clone/components/res_size.dart';
+import 'package:spotify_clone/_components/colors.dart';
+import 'package:spotify_clone/_components/res_size.dart';
 import 'package:spotify_clone/homepage/homepage.dart';
 import 'package:spotify_clone/Search/search.dart';
 import 'package:spotify_clone/library_page/library.dart';

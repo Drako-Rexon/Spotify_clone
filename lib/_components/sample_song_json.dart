@@ -409,14 +409,76 @@ List browseAll = [
   'assets/images/search/browseAll/Live Events.png',
 ];
 List libraryTiles = [
-  {"title": "Liked Songs", "type": "Playlist", "songNo": "266"},
-  {"title": "Emotional Songs", "type": "Playlist", "Artist": "Jhesy"},
-  {"title": "Augustten Ft Jhesy😇", "type": "Playlist", "Artist": "Jhesy"},
+  {
+    "title": "Liked Songs",
+    "type": "Playlist",
+    "songNo": "266",
+    "img": 'assets/images/songLibrary/ArtlibArt-1.png'
+  },
+  {
+    "title": "Emotional Songs",
+    "type": "Playlist",
+    "Artist": "Jhesy",
+    "img": 'assets/images/songLibrary/ArtlibArt-2.png'
+  },
+  {
+    "title": "Augustten Ft Jhesy😇",
+    "type": "Playlist",
+    "Artist": "Jhesy",
+    "img": 'assets/images/songLibrary/ArtlibArt-3.png'
+  },
   {
     "title": "All the Little Lights (Deluxe Version)",
     "type": "Album",
-    "Artist": "Passenger"
+    "Artist": "Passenger",
+    "img": 'assets/images/songLibrary/ArtlibArt-4.png'
   },
-  {"title": "Emotional Songs", "type": "Playlist", "Artist": "Jhesy"},
-  {"title": "Emotional Songs", "type": "Playlist", "Artist": "Jhesy"},
+  {
+    "title": "Emotional Songs",
+    "type": "Playlist",
+    "Artist": "Jhesy",
+    "img": 'assets/images/songLibrary/ArtlibArt-5.png'
+  },
+  {
+    "title": "Emotional Songs",
+    "type": "Playlist",
+    "Artist": "Jhesy",
+    "img": 'assets/images/songLibrary/ArtlibArt-6.png',
+  },
+  {
+    "title": "Emotional Songs",
+    "type": "Playlist",
+    "Artist": "Jhesy",
+    "img": 'assets/images/songLibrary/ArtlibArt-7.png',
+  },
+  {
+    "title": "Emotional Songs",
+    "type": "Playlist",
+    "Artist": "Jhesy",
+    "img": 'assets/images/songLibrary/ArtlibArt-8.png',
+  },
+  {
+    "title": "Emotional Songs",
+    "type": "Playlist",
+    "Artist": "Jhesy",
+    "img": 'assets/images/songLibrary/ArtlibArt-9.png',
+  },
+  {
+    "title": "Emotional Songs",
+    "type": "Playlist",
+    "Artist": "Jhesy",
+    "img": 'assets/images/songLibrary/ArtlibArt-10.png',
+  },
+  {
+    "title": "Emotional Songs",
+    "type": "Playlist",
+    "Artist": "Jhesy",
+    "img": 'assets/images/songLibrary/ArtlibArt-11.png',
+  },
+  {
+    "title": "Emotional Songs",
+    "type": "Playlist",
+    "Artist": "Jhesy",
+    "img": 'assets/images/songLibrary/ArtlibArt-12.png',
+  },
 ];
