@@ -150,11 +150,10 @@ class _LibraryPageState extends State<LibraryPage> {
                     backgroundColor: AppColor.lightGrey,
                     radius: 70,
                     child: Image(
-                      image: NetworkImage('https://www.clipartmax.com/png/middle/17-171655_how-to-set-use-add-button-white-svg-vector-add-white-icon.png'),
+                      image: NetworkImage(
+                          'https://www.clipartmax.com/png/middle/17-171655_how-to-set-use-add-button-white-svg-vector-add-white-icon.png'),
                     ),
                   ),
-                  // ),
-
                   SizedBox(width: 15),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -205,7 +204,7 @@ class _LibraryPageState extends State<LibraryPage> {
                   ),
                 ],
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 70),
               Row(
                 children: [
                   Icon(
@@ -254,6 +253,7 @@ class _LibraryPageState extends State<LibraryPage> {
               ],
             ),
           ),
+          SizedBox(height: 5),
         ],
       ),
     );
