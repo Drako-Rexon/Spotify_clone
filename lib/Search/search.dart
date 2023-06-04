@@ -1,10 +1,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:spotify_clone/Search/components/search_cards.dart';
-import 'package:spotify_clone/components/colors.dart';
-import 'package:spotify_clone/components/res_size.dart';
-import 'package:spotify_clone/components/sample_song_json.dart';
-import 'package:spotify_clone/homepage/components/regular_text.dart';
+import 'package:spotify/components/colors.dart';
+import 'package:spotify/components/res_size.dart';
+import 'package:spotify/components/sample_song_json.dart';
+import 'package:spotify/components/widgets.dart';
 
 class SearchPage extends StatelessWidget {
   const SearchPage({Key? key}) : super(key: key);
@@ -12,7 +11,7 @@ class SearchPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.spotifyBlack,
+      backgroundColor: sBlack,
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: SafeArea(
@@ -21,21 +20,22 @@ class SearchPage extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.only(left: 15, top: 40),
-                child: RegularText(
-                  text: 'Search',
-                  textColor: AppColor.spotifyWhite,
-                  isBold: true,
-                  textSize: 20,
+                child: Text(
+                  'Search',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: sWhite,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
-              SizedBox(height: 40),
+              const SizedBox(height: 40),
               Center(
                 child: Container(
                   height: 50,
                   width: ResSize.screenWidth - 30,
                   decoration: BoxDecoration(
-                      color: AppColor.spotifyWhite,
-                      borderRadius: BorderRadius.circular(6)),
+                      color: sWhite, borderRadius: BorderRadius.circular(6)),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
@@ -46,13 +46,13 @@ class SearchPage extends StatelessWidget {
                           child: TextField(
                             dragStartBehavior: DragStartBehavior.start,
                             showCursor: true,
-                            cursorColor: AppColor.spotifyBlack,
+                            cursorColor: sBlack,
                             cursorHeight: 20,
                             decoration: InputDecoration(
                               prefixIcon: Icon(
                                 Icons.search,
                                 size: 34,
-                                color: AppColor.spotifyBlack,
+                                color: sBlack,
                               ),
                               border: InputBorder.none,
                               contentPadding: const EdgeInsets.only(
@@ -72,10 +72,12 @@ class SearchPage extends StatelessWidget {
               SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.only(left: 15),
-                child: RegularText(
-                  text: "Your top genres",
-                  isBold: true,
-                  textSize: 14,
+                child: Text(
+                  "Your top genres",
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
               SizedBox(height: 20),
@@ -87,10 +89,12 @@ class SearchPage extends StatelessWidget {
               SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.only(left: 15),
-                child: RegularText(
-                  text: "Browse all",
-                  isBold: true,
-                  textSize: 14,
+                child: Text(
+                  "Browse all",
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
               SearchCards(

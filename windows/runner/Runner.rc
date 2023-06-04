@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "spotify_clone" "\0"
+            VALUE "FileDescription", "spotify" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "spotify_clone" "\0"
+            VALUE "InternalName", "spotify" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2023 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "spotify_clone.exe" "\0"
-            VALUE "ProductName", "spotify_clone" "\0"
+            VALUE "OriginalFilename", "spotify.exe" "\0"
+            VALUE "ProductName", "spotify" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

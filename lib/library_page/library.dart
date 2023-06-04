@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_clone/components/colors.dart';
-import 'package:spotify_clone/components/res_size.dart';
-import 'package:spotify_clone/components/sample_song_json.dart';
-import 'package:spotify_clone/homepage/components/regular_text.dart';
-import 'package:spotify_clone/library_page/components/sorting_button.dart';
+import 'package:spotify/components/colors.dart';
+import 'package:spotify/components/res_size.dart';
+import 'package:spotify/components/sample_song_json.dart';
+import 'package:spotify/components/widgets.dart';
 
 class LibraryPage extends StatefulWidget {
-  LibraryPage({Key? key}) : super(key: key);
+  const LibraryPage({Key? key}) : super(key: key);
 
   @override
   State<LibraryPage> createState() => _LibraryPageState();
@@ -19,13 +18,13 @@ class _LibraryPageState extends State<LibraryPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: AppColor.spotifyBlack,
+        backgroundColor: sBlack,
         shadowColor: Colors.black,
         elevation: 4,
         titleSpacing: 0,
         bottom: AppBarCustomForSpotify(),
       ),
-      backgroundColor: AppColor.spotifyBlack,
+      backgroundColor: sBlack,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -36,25 +35,25 @@ class _LibraryPageState extends State<LibraryPage> {
                 bottom: 10,
               ),
               width: ResSize.screenWidth - 20,
-              child: Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(
                     children: [
                       Icon(
                         Icons.download_sharp,
-                        color: AppColor.spotifyWhite,
+                        color: sWhite,
                       ),
                       SizedBox(width: 10),
-                      RegularText(
-                        text: "Most recent",
-                        textSize: 12,
+                      Text(
+                        "Most recent",
+                        style: TextStyle(fontSize: 12),
                       ),
                     ],
                   ),
                   Icon(
                     Icons.square,
-                    color: AppColor.spotifyWhite,
+                    color: sWhite,
                   ),
                 ],
               ),
@@ -84,10 +83,6 @@ class _LibraryPageState extends State<LibraryPage> {
                             image: DecorationImage(
                               fit: BoxFit.cover,
                               image: AssetImage(libraryTiles[index]["img"]),
-                              //  == null
-                              //     ? NetworkImage(
-                              //         'https://www.cleanpng.com/free/no-image.html')
-                              //     : NetworkImage('https://www.cleanpng.com/free/no-image.html'),
                             ),
                           ),
                         ),
@@ -96,34 +91,34 @@ class _LibraryPageState extends State<LibraryPage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            RegularText(
-                              text: libraryTiles[index]["title"],
-                              textSize: 15,
+                            Text(
+                              libraryTiles[index]["title"],
+                              style: const TextStyle(fontSize: 15),
                             ),
                             Row(
                               children: [
-                                Icon(
+                                const Icon(
                                   Icons.download,
-                                  color: AppColor.spotifyGreen,
+                                  color: sGreen,
                                   size: 16,
                                 ),
-                                SizedBox(width: 3),
-                                RegularText(
-                                  text: libraryTiles[index]["type"],
-                                  textSize: 10,
+                                const SizedBox(width: 3),
+                                Text(
+                                  libraryTiles[index]["type"],
+                                  style: const TextStyle(fontSize: 10),
                                 ),
-                                SizedBox(width: 3),
-                                Icon(
+                                const SizedBox(width: 3),
+                                const Icon(
                                   Icons.circle,
                                   color: Colors.white,
                                   size: 4,
                                 ),
-                                SizedBox(width: 3),
-                                RegularText(
-                                  text: libraryTiles[index]["songNo"] == null
+                                const SizedBox(width: 3),
+                                Text(
+                                  libraryTiles[index]["songNo"] == null
                                       ? libraryTiles[index]["Artist"]
                                       : libraryTiles[index]["songNo"],
-                                  textSize: 10,
+                                  style: const TextStyle(fontSize: 10),
                                 ),
                               ],
                             ),
@@ -136,7 +131,6 @@ class _LibraryPageState extends State<LibraryPage> {
               ),
             ),
             Container(
-              // color: Colors.red,
               margin: const EdgeInsets.only(
                 top: 10,
                 bottom: 10,
@@ -144,10 +138,10 @@ class _LibraryPageState extends State<LibraryPage> {
                 right: 10,
               ),
               height: 70,
-              child: Row(
+              child: const Row(
                 children: [
                   CircleAvatar(
-                    backgroundColor: AppColor.lightGrey,
+                    backgroundColor: sLightGrey,
                     radius: 70,
                     child: Image(
                       image: NetworkImage(
@@ -159,9 +153,9 @@ class _LibraryPageState extends State<LibraryPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      RegularText(
-                        text: "Add artists",
-                        textSize: 15,
+                      Text(
+                        "Add artists",
+                        style: TextStyle(fontSize: 15),
                       ),
                     ],
                   ),
@@ -175,31 +169,31 @@ class _LibraryPageState extends State<LibraryPage> {
     );
   }
 
-  // ! END OF MAIN CODE
-
   PreferredSize AppBarCustomForSpotify() {
     return PreferredSize(
       preferredSize: Size.fromHeight(100),
       child: Column(
         children: [
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left: 10, right: 6),
+                    padding: EdgeInsets.only(left: 10, right: 6),
                     child: Icon(
                       Icons.ac_unit_sharp,
-                      color: AppColor.spotifyWhite,
+                      color: sWhite,
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 8),
-                    child: RegularText(
-                      text: "Your Library",
-                      textSize: 16,
-                      isBold: true,
+                    padding: EdgeInsets.only(left: 8),
+                    child: Text(
+                      "Your Library",
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ],
@@ -210,13 +204,13 @@ class _LibraryPageState extends State<LibraryPage> {
                   Icon(
                     Icons.search,
                     size: 33,
-                    color: AppColor.spotifyWhite,
+                    color: sWhite,
                   ),
                   SizedBox(width: 8),
                   Icon(
                     Icons.add,
                     size: 35,
-                    color: AppColor.spotifyWhite,
+                    color: sWhite,
                   ),
                   SizedBox(width: 5),
                 ],
@@ -239,42 +233,17 @@ class _LibraryPageState extends State<LibraryPage> {
                         color: Colors.white,
                       )
                     : Container(),
-                SortingButtons(
-                  title: 'Tap ME',
-                ),
-                SizedBox(width: 16),
-                SortingButtons(
-                  title: 'Tap ME',
-                ),
-                SizedBox(width: 16),
-                SortingButtons(
-                  title: 'Tap ME',
-                ),
+                const SortingButtons(title: 'Tap ME'),
+                const SizedBox(width: 16),
+                const SortingButtons(title: 'Tap ME'),
+                const SizedBox(width: 16),
+                const SortingButtons(title: 'Tap ME'),
               ],
             ),
           ),
-          SizedBox(height: 5),
+          const SizedBox(height: 5),
         ],
       ),
     );
   }
 }
-
-
-
-//! This is for storing extra code, to not to write again after mistake
-                  // ListTile(
-                  //   minVerticalPadding: 45,
-                  //   tileColor: Colors.grey,
-                  //   selectedTileColor: Colors.red, // ? For debugging or testing
-                  //   leading: Container(
-                  //     height: 90,
-                  //     width: 90,
-                  //     decoration: BoxDecoration(
-                  //       color: Colors.white,
-                  //       image: DecorationImage(
-                  //         image: AssetImage("assets/images/home/Art-1.png"),
-                  //       ),
-                  //     ),
-                  //   ),
-                  // )
