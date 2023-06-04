@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_clone/components/colors.dart';
-import 'package:spotify_clone/components/res_size.dart';
-import 'package:spotify_clone/components/sample_song_json.dart';
-import 'package:spotify_clone/homepage/components/card_home_top_page.dart';
-import 'package:spotify_clone/homepage/components/head_home_page.dart';
-import 'package:spotify_clone/homepage/components/home_carousel_typeOne.dart';
-import 'package:spotify_clone/homepage/components/home_carousel_typeTwo.dart';
-import 'package:spotify_clone/homepage/components/profile_card.dart';
-import 'package:spotify_clone/homepage/components/single_song_profile_card.dart';
+import 'package:spotify/components/colors.dart';
+import 'package:spotify/components/res_size.dart';
+import 'package:spotify/components/sample_song_json.dart';
+import 'package:spotify/components/widgets.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -19,10 +14,10 @@ class _HomePageState extends State<HomePage> {
   int activeMenu1 = 0;
   int activeMenu2 = 0;
   List<Color> homeGradientTop = [
-    AppColor.homeTopGradient1.withOpacity(0.1),
-    AppColor.homeTopGradient2.withOpacity(0.2),
-    AppColor.homeTopGradient3.withOpacity(0.2),
-    AppColor.homeTopGradient4.withOpacity(0.2),
+    homeTopGradient1.withOpacity(0.1),
+    homeTopGradient2.withOpacity(0.2),
+    homeTopGradient3.withOpacity(0.2),
+    homeTopGradient4.withOpacity(0.2),
   ];
 
   @override

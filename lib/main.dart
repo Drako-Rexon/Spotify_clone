@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:spotify_clone/redirecting_page/redirecting.dart';
+import 'package:spotify/redirecting_page/redirecting.dart';
 
 void main() {
   // ? This is for the chaging theme of status bar while app is running
-  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
     statusBarIconBrightness: Brightness.light,
   ));
@@ -17,9 +17,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Spotify Clone',
+      title: 'Spotify',
       home: Home(),
     );
   }
