@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_clone/_components/colors.dart';
-import 'package:spotify_clone/_components/res_size.dart';
-import 'package:spotify_clone/_components/sample_song_json.dart';
+import 'package:spotify_clone/components/colors.dart';
+import 'package:spotify_clone/components/res_size.dart';
+import 'package:spotify_clone/components/sample_song_json.dart';
 import 'package:spotify_clone/homepage/components/card_home_top_page.dart';
 import 'package:spotify_clone/homepage/components/head_home_page.dart';
 import 'package:spotify_clone/homepage/components/home_carousel_typeOne.dart';
@@ -68,12 +68,12 @@ class _HomePageState extends State<HomePage> {
                   padding: EdgeInsets.only(top: 55, bottom: 10, left: 8),
                   child: HeadHomePage(text: "Good Evening"),
                 ),
-                Column(
-                  children: List.generate(homeTopCardOne.length ~/ 2, (index) {
-                    return Container(
-                      padding: const EdgeInsets.only(bottom: 10),
-                      width: ResSize.screenWidth - 30,
-                      child: Row(
+                Container(
+                  height: 200,
+                  child: ListView.builder(
+                    itemCount: 3,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -86,9 +86,30 @@ class _HomePageState extends State<HomePage> {
                             text: homeTopCardOne[(index * 2) + 1]["title"],
                           ),
                         ],
-                      ),
-                    );
-                  }),
+                      );
+                    },
+                  ),
+
+                  // children: List.generate(homeTopCardOne.length ~/ 2, (index) {
+                  //   return Container(
+                  //     padding: const EdgeInsets.only(bottom: 10),
+                  //     width: ResSize.screenWidth - 30,
+                  //     child: Row(
+                  //       mainAxisSize: MainAxisSize.max,
+                  //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  //       children: [
+                  //         CardHomeTopPage(
+                  //           img: homeTopCardOne[index * 2]["img"],
+                  //           text: homeTopCardOne[index * 2]["title"],
+                  //         ),
+                  //         CardHomeTopPage(
+                  //           img: homeTopCardOne[(index * 2) + 1]["img"],
+                  //           text: homeTopCardOne[(index * 2) + 1]["title"],
+                  //         ),
+                  //       ],
+                  //     ),
+                  //   );
+                  // }),
                 ),
                 SizedBox(height: 30),
                 // * Card with profile and card
@@ -123,7 +144,8 @@ class _HomePageState extends State<HomePage> {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(
-                    left: 20,top: 20,
+                    left: 20,
+                    top: 20,
                     bottom: 10,
                   ),
                   child: ProfileCard(

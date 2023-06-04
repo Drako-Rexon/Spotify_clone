@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_clone/_components/colors.dart';
-import 'package:spotify_clone/_components/res_size.dart';
-import 'package:spotify_clone/_components/sample_song_json.dart';
+import 'package:spotify_clone/components/colors.dart';
+import 'package:spotify_clone/components/res_size.dart';
+import 'package:spotify_clone/components/sample_song_json.dart';
 import 'package:spotify_clone/homepage/components/regular_text.dart';
-import 'package:spotify_clone/library_page/_components/sorting_button.dart';
+import 'package:spotify_clone/library_page/components/sorting_button.dart';
 
 class LibraryPage extends StatefulWidget {
   LibraryPage({Key? key}) : super(key: key);
