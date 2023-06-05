@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_clone/components/colors.dart';
-import 'package:spotify_clone/components/res_size.dart';
-import 'package:spotify_clone/homepage/homepage.dart';
-import 'package:spotify_clone/Search/search.dart';
-import 'package:spotify_clone/library_page/library.dart';
+import 'package:spotify/Search/search.dart';
+import 'package:spotify/components/colors.dart';
+import 'package:spotify/components/res_size.dart';
+import 'package:spotify/homepage/homepage.dart';
+import 'package:spotify/library_page/library.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -38,8 +38,8 @@ class _HomeState extends State<Home> {
     return IndexedStack(
       index: activeTab,
       children: [
-        HomePage(),
-        SearchPage(),
+        const HomePage(),
+        const SearchPage(),
         LibraryPage(),
       ],
     );
@@ -51,10 +51,10 @@ class _HomeState extends State<Home> {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            AppColor.spotifyBlack,
-            AppColor.spotifyBlack.withOpacity(0.6),
-            AppColor.spotifyBlack.withOpacity(0.2),
-            Color.fromARGB(0, 255, 255, 255),
+            sBlack,
+            sBlack.withOpacity(0.6),
+            sBlack.withOpacity(0.2),
+            const Color.fromARGB(0, 255, 255, 255),
           ],
           begin: Alignment.centerLeft,
           end: Alignment.topCenter,
@@ -68,7 +68,7 @@ class _HomeState extends State<Home> {
           return IconButton(
             icon: Icon(
               activeTab == index ? navIconOn[index] : navIconOff[index],
-              color: AppColor.spotifyWhite,
+              color: sWhite,
               size: 36,
             ),
             onPressed: () {

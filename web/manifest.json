@@ -1,6 +1,6 @@
 {
-    "name": "spotify_clone",
-    "short_name": "spotify_clone",
+    "name": "spotify",
+    "short_name": "spotify",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
