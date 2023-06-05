@@ -11,7 +11,7 @@
 ///      fonts:
 ///       - asset: fonts/NavIcons.ttf
 ///
-/// 
+///
 ///
 import 'package:flutter/widgets.dart';
 
@@ -21,10 +21,16 @@ class NavIcons {
   static const _kFontFam = 'NavIcons';
   static const String? _kFontPkg = null;
 
-  static const IconData state_on = IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData state_on_1 = IconData(0xe801, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData state_on_2 = IconData(0xe802, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData state_off = IconData(0xe803, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData state_off_1 = IconData(0xe804, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData state_off_2 = IconData(0xe805, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData state_on =
+      IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData state_on_1 =
+      IconData(0xe801, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData state_on_2 =
+      IconData(0xe802, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData state_off =
+      IconData(0xe803, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData state_off_1 =
+      IconData(0xe804, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData state_off_2 =
+      IconData(0xe805, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 }
