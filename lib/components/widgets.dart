@@ -38,12 +38,12 @@ class CardHomeTopPage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(width: 7),
-              Container(
+              const SizedBox(width: 7),
+              SizedBox(
                 width: 70,
                 child: Text(
                   text,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 10,
                     fontWeight: FontWeight.bold,
                     color: sWhite,
@@ -70,9 +70,10 @@ class HeadHomePage extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          "Good evening",
-          style: TextStyle(
+          text,
+          style: const TextStyle(
             fontSize: 20,
+            color: sWhite,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -80,21 +81,21 @@ class HeadHomePage extends StatelessWidget {
           children: [
             IconButton(
               onPressed: () {},
-              icon: Icon(
+              icon: const Icon(
                 Icons.blender_outlined,
                 color: sWhite,
               ),
             ),
             IconButton(
               onPressed: () {},
-              icon: Icon(
+              icon: const Icon(
                 Icons.blender_outlined,
                 color: sWhite,
               ),
             ),
             IconButton(
               onPressed: () {},
-              icon: Icon(
+              icon: const Icon(
                 UniconsLine.cog,
                 color: sWhite,
               ),
@@ -119,7 +120,7 @@ class HomeCarouselTypeOne extends StatelessWidget {
     return Column(
       children: [
         Container(
-          padding: EdgeInsets.only(
+          padding: const EdgeInsets.only(
             top: 40,
             left: 20,
             right: 20,
@@ -128,14 +129,15 @@ class HomeCarouselTypeOne extends StatelessWidget {
           alignment: Alignment.centerLeft,
           child: Text(
             heading,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 18,
+              color: sWhite,
               fontWeight: FontWeight.bold,
             ),
           ),
         ),
         Container(
-          margin: EdgeInsets.symmetric(horizontal: 10),
+          margin: const EdgeInsets.symmetric(horizontal: 10),
           height: 200,
           child: ListView.builder(
             itemCount: 5,
@@ -146,7 +148,7 @@ class HomeCarouselTypeOne extends StatelessWidget {
                       // * This is only for the first card of the carousel
                       children: [
                         Container(
-                          margin: EdgeInsets.all(10),
+                          margin: const EdgeInsets.all(10),
                           width: 150,
                           height: 150,
                           decoration: BoxDecoration(
@@ -156,7 +158,7 @@ class HomeCarouselTypeOne extends StatelessWidget {
                             ),
                           ),
                         ),
-                        Container(
+                        SizedBox(
                           width: 150,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -166,7 +168,7 @@ class HomeCarouselTypeOne extends StatelessWidget {
                                 listing[index]["text0"],
                                 maxLines: 2,
                                 overflow: TextOverflow.ellipsis,
-                                style: TextStyle(
+                                style: const TextStyle(
                                   color: sWhite,
                                   fontSize: 12,
                                 ),
@@ -180,7 +182,7 @@ class HomeCarouselTypeOne extends StatelessWidget {
                   : Column(
                       children: [
                         Container(
-                          margin: EdgeInsets.all(10),
+                          margin: const EdgeInsets.all(10),
                           width: 150,
                           height: 150,
                           decoration: BoxDecoration(
@@ -189,17 +191,16 @@ class HomeCarouselTypeOne extends StatelessWidget {
                                 image: AssetImage(listing[index]["img"])),
                           ),
                         ),
-                        Container(
+                        SizedBox(
                           width: 150,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            // mainAxisSize: MainAxisSize.min,
                             children: [
                               Text(
                                 listing[index]["title"],
                                 maxLines: 1,
                                 overflow: TextOverflow.ellipsis,
-                                style: TextStyle(
+                                style: const TextStyle(
                                   color: sWhite,
                                   fontSize: 12,
                                 ),
@@ -210,21 +211,21 @@ class HomeCarouselTypeOne extends StatelessWidget {
                                     listing[index]["type"],
                                     maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
-                                    style:
-                                        TextStyle(color: sWhite, fontSize: 10),
+                                    style: const TextStyle(
+                                        color: sWhite, fontSize: 10),
                                   ),
-                                  SizedBox(width: 4),
-                                  Icon(
+                                  const SizedBox(width: 4),
+                                  const Icon(
                                     Icons.circle,
                                     color: sWhite,
                                     size: 4,
                                   ),
-                                  SizedBox(width: 4),
+                                  const SizedBox(width: 4),
                                   Text(
                                     listing[index]["album"],
                                     maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       color: sWhite,
                                       fontSize: 10,
                                     ),
@@ -245,7 +246,7 @@ class HomeCarouselTypeOne extends StatelessWidget {
 }
 
 class HomeCarouselTypeTwo extends StatelessWidget {
-  HomeCarouselTypeTwo({
+  const HomeCarouselTypeTwo({
     Key? key,
     this.heading = "",
     this.head = true,
@@ -291,7 +292,7 @@ class HomeCarouselTypeTwo extends StatelessWidget {
                 // * This is only for the first card of the carousel
                 children: [
                   Container(
-                    margin: EdgeInsets.all(10),
+                    margin: const EdgeInsets.all(10),
                     width: 150,
                     height: 150,
                     decoration: BoxDecoration(
@@ -301,7 +302,7 @@ class HomeCarouselTypeTwo extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Container(
+                  SizedBox(
                     width: 150,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -310,7 +311,7 @@ class HomeCarouselTypeTwo extends StatelessWidget {
                           listing[index]["title"],
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: sWhite,
                             fontSize: 12,
                           ),
@@ -363,6 +364,7 @@ class ProfileCard extends StatelessWidget {
               artistName,
               style: const TextStyle(
                 fontSize: 19,
+                color: sWhite,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -429,20 +431,26 @@ class _SingleCardState extends State<SingleCard> {
                             "Hurtless (Acoustic)",
                             style: TextStyle(
                               fontSize: 13,
+                              color: sWhite,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                           const SizedBox(height: 5),
                           Row(
                             children: [
-                              Text("Single"),
-                              SizedBox(width: 5),
-                              Icon(
+                              const Text(
+                                "Single",
+                                style: TextStyle(
+                                  color: sWhite,
+                                ),
+                              ),
+                              const SizedBox(width: 5),
+                              const Icon(
                                 Icons.circle,
                                 color: sWhite,
                                 size: 5,
                               ),
-                              SizedBox(width: 5),
+                              const SizedBox(width: 5),
                               Text(
                                 "Dean Lewis",
                                 style: TextStyle(
@@ -474,23 +482,23 @@ class _SingleCardState extends State<SingleCard> {
                               });
                             },
                             icon: fav
-                                ? Icon(
+                                ? const Icon(
                                     Icons.favorite,
                                     color: sWhite,
                                     size: 34,
                                   )
-                                : Icon(
+                                : const Icon(
                                     Icons.favorite_outline,
                                     color: sWhite,
                                     size: 34,
                                   ),
                           ),
                           Container(
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               shape: BoxShape.circle,
                               color: sWhite,
                             ),
-                            child: Center(
+                            child: const Center(
                               child: IconButton(
                                 onPressed: null,
                                 icon: Icon(
@@ -547,10 +555,10 @@ class _SortingButtonsState extends State<SortingButtons> {
         ),
         side: onOrOff
             ? MaterialStateProperty.all(
-                BorderSide(color: sWhite),
+                const BorderSide(color: sWhite),
               )
             : MaterialStateProperty.all(
-                BorderSide(color: sWhite),
+                const BorderSide(color: sWhite),
               ),
       ),
       onPressed: () {
@@ -560,7 +568,7 @@ class _SortingButtonsState extends State<SortingButtons> {
       },
       child: Text(
         widget.title,
-        style: TextStyle(fontSize: 10),
+        style: const TextStyle(fontSize: 10, color: sWhite),
       ),
     );
   }
@@ -580,7 +588,7 @@ class SearchCards extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: contHeight,
       child: ListView.builder(
         physics: const NeverScrollableScrollPhysics(),

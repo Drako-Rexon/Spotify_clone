@@ -18,8 +18,8 @@ class SearchPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 15, top: 40),
+              const Padding(
+                padding: EdgeInsets.only(left: 15, top: 40),
                 child: Text(
                   'Search',
                   style: TextStyle(
@@ -41,8 +41,8 @@ class SearchPage extends StatelessWidget {
                     children: [
                       SizedBox(
                         width: ResSize.screenWidth - 80,
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 8),
+                        child: const Padding(
+                          padding: EdgeInsets.only(left: 8),
                           child: TextField(
                             dragStartBehavior: DragStartBehavior.start,
                             showCursor: true,
@@ -55,7 +55,7 @@ class SearchPage extends StatelessWidget {
                                 color: sBlack,
                               ),
                               border: InputBorder.none,
-                              contentPadding: const EdgeInsets.only(
+                              contentPadding: EdgeInsets.only(
                                 top: 12,
                                 left: 10,
                               ),
@@ -69,31 +69,33 @@ class SearchPage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
-              Padding(
-                padding: const EdgeInsets.only(left: 15),
+              const SizedBox(height: 20),
+              const Padding(
+                padding: EdgeInsets.only(left: 15),
                 child: Text(
                   "Your top genres",
                   style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.bold,
+                    color: sWhite,
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               SearchCards(
                 contHeight: ((topGenres.length) ~/ 2) * 120,
                 costList: topGenres,
                 count: (topGenres.length) ~/ 2,
               ),
-              SizedBox(height: 20),
-              Padding(
-                padding: const EdgeInsets.only(left: 15),
+              const SizedBox(height: 20),
+              const Padding(
+                padding: EdgeInsets.only(left: 15),
                 child: Text(
                   "Browse all",
                   style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.bold,
+                    color: sWhite,
                   ),
                 ),
               ),
@@ -102,7 +104,7 @@ class SearchPage extends StatelessWidget {
                 costList: browseAll,
                 count: (browseAll.length) ~/ 2,
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
             ],
           ),
         ),

@@ -47,7 +47,7 @@ class _LibraryPageState extends State<LibraryPage> {
                       SizedBox(width: 10),
                       Text(
                         "Most recent",
-                        style: TextStyle(fontSize: 12),
+                        style: TextStyle(fontSize: 12, color: sWhite),
                       ),
                     ],
                   ),
@@ -62,11 +62,10 @@ class _LibraryPageState extends State<LibraryPage> {
               width: ResSize.screenWidth,
               height: libraryTiles.length * 90,
               child: ListView.builder(
-                physics: NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 itemCount: libraryTiles.length,
                 itemBuilder: (BuildContext context, int index) {
                   return Container(
-                    // color: Colors.red,
                     margin: const EdgeInsets.only(
                       top: 10,
                       bottom: 10,
@@ -86,14 +85,15 @@ class _LibraryPageState extends State<LibraryPage> {
                             ),
                           ),
                         ),
-                        SizedBox(width: 15),
+                        const SizedBox(width: 15),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
                               libraryTiles[index]["title"],
-                              style: const TextStyle(fontSize: 15),
+                              style:
+                                  const TextStyle(fontSize: 15, color: sWhite),
                             ),
                             Row(
                               children: [
@@ -105,7 +105,8 @@ class _LibraryPageState extends State<LibraryPage> {
                                 const SizedBox(width: 3),
                                 Text(
                                   libraryTiles[index]["type"],
-                                  style: const TextStyle(fontSize: 10),
+                                  style: const TextStyle(
+                                      fontSize: 10, color: sWhite),
                                 ),
                                 const SizedBox(width: 3),
                                 const Icon(
@@ -115,10 +116,10 @@ class _LibraryPageState extends State<LibraryPage> {
                                 ),
                                 const SizedBox(width: 3),
                                 Text(
-                                  libraryTiles[index]["songNo"] == null
-                                      ? libraryTiles[index]["Artist"]
-                                      : libraryTiles[index]["songNo"],
-                                  style: const TextStyle(fontSize: 10),
+                                  libraryTiles[index]["songNo"] ??
+                                      libraryTiles[index]["Artist"],
+                                  style: const TextStyle(
+                                      fontSize: 10, color: sWhite),
                                 ),
                               ],
                             ),
@@ -154,8 +155,8 @@ class _LibraryPageState extends State<LibraryPage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Add artists",
-                        style: TextStyle(fontSize: 15),
+                        "Add Artists",
+                        style: TextStyle(fontSize: 15, color: sWhite),
                       ),
                     ],
                   ),
@@ -171,7 +172,7 @@ class _LibraryPageState extends State<LibraryPage> {
 
   PreferredSize AppBarCustomForSpotify() {
     return PreferredSize(
-      preferredSize: Size.fromHeight(100),
+      preferredSize: const Size.fromHeight(100),
       child: Column(
         children: [
           const Row(
@@ -191,6 +192,7 @@ class _LibraryPageState extends State<LibraryPage> {
                     child: Text(
                       "Your Library",
                       style: TextStyle(
+                        color: sWhite,
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
@@ -225,7 +227,7 @@ class _LibraryPageState extends State<LibraryPage> {
             },
             child: Row(
               children: [
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 sorted
                     ? Container(
                         width: 10,
@@ -233,11 +235,11 @@ class _LibraryPageState extends State<LibraryPage> {
                         color: Colors.white,
                       )
                     : Container(),
-                const SortingButtons(title: 'Tap ME'),
+                const SortingButtons(title: 'Playlists'),
                 const SizedBox(width: 16),
-                const SortingButtons(title: 'Tap ME'),
+                const SortingButtons(title: 'Albums'),
                 const SizedBox(width: 16),
-                const SortingButtons(title: 'Tap ME'),
+                const SortingButtons(title: 'Downloaded'),
               ],
             ),
           ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
-import 'package:spotify/album/album.dart';
+import 'package:spotify/components/colors.dart';
 
 class MusicPlayer extends StatefulWidget {
   final String title;
@@ -31,7 +31,6 @@ class _MusicPlayerState extends State<MusicPlayer> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     initPlayer();
   }
@@ -66,7 +65,6 @@ class _MusicPlayerState extends State<MusicPlayer> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     stopSound(widget.songUrl);
   }
@@ -269,7 +267,7 @@ class _MusicPlayerState extends State<MusicPlayer> {
                 IconButton(
                   iconSize: 50,
                   icon: Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: primary,
                       shape: BoxShape.circle,
                     ),
@@ -319,7 +317,7 @@ class _MusicPlayerState extends State<MusicPlayer> {
           const SizedBox(
             height: 20,
           ),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Icon(
@@ -327,11 +325,11 @@ class _MusicPlayerState extends State<MusicPlayer> {
                 color: primary,
                 size: 20,
               ),
-              const SizedBox(
+              SizedBox(
                 width: 10,
               ),
               Padding(
-                padding: const EdgeInsets.only(
+                padding: EdgeInsets.only(
                   top: 3.0,
                 ),
                 child: Text(

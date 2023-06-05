@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AppColor {}
-
+const Color primary = Color(0xFF1ed661);
 const Color sWhite = Colors.white;
 const Color homeTopGradient4 = Color(0xFF121212);
 const Color homeTopGradient3 = Color(0xFF1B1235);

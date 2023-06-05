@@ -4,8 +4,6 @@ import 'package:page_transition/page_transition.dart';
 import 'package:spotify/components/sample_song_json.dart';
 import 'package:spotify/player/player.dart';
 
-var primary = const Color(0xFF1ed661);
-
 class AlbumPage extends StatefulWidget {
   final dynamic song;
 

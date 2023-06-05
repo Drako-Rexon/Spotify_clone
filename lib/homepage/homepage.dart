@@ -60,10 +60,10 @@ class _HomePageState extends State<HomePage> {
             Column(
               children: [
                 Container(
-                  padding: EdgeInsets.only(top: 55, bottom: 10, left: 8),
-                  child: HeadHomePage(text: "Good Evening"),
+                  padding: const EdgeInsets.only(top: 55, bottom: 10, left: 8),
+                  child: const HeadHomePage(text: "Good Afternoon"),
                 ),
-                Container(
+                SizedBox(
                   height: 200,
                   child: ListView.builder(
                     itemCount: 3,
@@ -106,10 +106,10 @@ class _HomePageState extends State<HomePage> {
                   //   );
                   // }),
                 ),
-                SizedBox(height: 30),
+                const SizedBox(height: 30),
                 // * Card with profile and card
-                Padding(
-                  padding: const EdgeInsets.only(
+                const Padding(
+                  padding: EdgeInsets.only(
                     left: 20,
                     bottom: 20,
                   ),
@@ -119,8 +119,8 @@ class _HomePageState extends State<HomePage> {
                     titlePart: "new release from",
                   ),
                 ),
-                SingleCard(),
-                SizedBox(height: 10),
+                const SingleCard(),
+                const SizedBox(height: 10),
                 HomeCarouselTypeOne(
                   listing: homeCarouselTypeOne,
                   heading: "Discover something new",
@@ -137,8 +137,8 @@ class _HomePageState extends State<HomePage> {
                   heading: "Your top mixes",
                   listing: homeCarouselTypeTwo2,
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(
+                const Padding(
+                  padding: EdgeInsets.only(
                     left: 20,
                     top: 20,
                     bottom: 10,
