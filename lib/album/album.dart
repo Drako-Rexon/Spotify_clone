@@ -5,9 +5,8 @@ import 'package:spotify/components/sample_song_json.dart';
 import 'package:spotify/player/player.dart';
 
 class AlbumPage extends StatefulWidget {
-  final dynamic song;
-
   const AlbumPage({Key? key, this.song}) : super(key: key);
+  final dynamic song;
 
   @override
   State<AlbumPage> createState() => _AlbumPageState();
@@ -36,9 +35,7 @@ class _AlbumPageState extends State<AlbumPage> {
                 height: heightForAlbum / 3.5,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage(
-                      widget.song['img'],
-                    ),
+                    image: AssetImage(widget.song['img']),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -47,9 +44,7 @@ class _AlbumPageState extends State<AlbumPage> {
                 height: 30,
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 24,
-                ),
+                padding: const EdgeInsets.symmetric(horizontal: 24),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -218,14 +213,12 @@ class _AlbumPageState extends State<AlbumPage> {
                           Container(
                             width: (size.width - 60) * 0.77,
                             height: 50,
-                            decoration: const BoxDecoration(
-                              color: Colors.black,
-                            ),
+                            decoration:
+                                const BoxDecoration(color: Colors.black),
                             child: Row(
                               children: [
                                 Text(
-                                  '${index + 1}   ' +
-                                      widget.song["songs"][index]["title"],
+                                  '${index + 1}   ${widget.song["songs"][index]["title"]}',
                                   maxLines: 1,
                                   style: const TextStyle(
                                     color: Colors.white,

@@ -203,7 +203,7 @@ class _MusicPlayerState extends State<MusicPlayer> {
             height: 10,
           ),
           Slider(
-              activeColor: primary,
+              activeColor: sGreen,
               value: _currentSliderValue,
               max: 200,
               min: 0,
@@ -268,7 +268,7 @@ class _MusicPlayerState extends State<MusicPlayer> {
                   iconSize: 50,
                   icon: Container(
                     decoration: const BoxDecoration(
-                      color: primary,
+                      color: sGreen,
                       shape: BoxShape.circle,
                     ),
                     child: Center(
@@ -322,7 +322,7 @@ class _MusicPlayerState extends State<MusicPlayer> {
             children: [
               Icon(
                 Feather.tv,
-                color: primary,
+                color: sGreen,
                 size: 20,
               ),
               SizedBox(
@@ -335,7 +335,7 @@ class _MusicPlayerState extends State<MusicPlayer> {
                 child: Text(
                   "Chromecast is ready",
                   style: TextStyle(
-                    color: primary,
+                    color: sGreen,
                   ),
                 ),
               ),

@@ -22,7 +22,7 @@ class _LibraryPageState extends State<LibraryPage> {
         shadowColor: Colors.black,
         elevation: 4,
         titleSpacing: 0,
-        bottom: AppBarCustomForSpotify(),
+        bottom: appBarCustomForSpotify(),
       ),
       backgroundColor: sBlack,
       body: SingleChildScrollView(
@@ -170,7 +170,7 @@ class _LibraryPageState extends State<LibraryPage> {
     );
   }
 
-  PreferredSize AppBarCustomForSpotify() {
+  PreferredSize appBarCustomForSpotify() {
     return PreferredSize(
       preferredSize: const Size.fromHeight(100),
       child: Column(
@@ -233,6 +233,7 @@ class _LibraryPageState extends State<LibraryPage> {
                         width: 10,
                         height: 10,
                         color: Colors.white,
+                        child: const Icon(Icons.cancel_outlined),
                       )
                     : Container(),
                 const SortingButtons(title: 'Playlists'),
