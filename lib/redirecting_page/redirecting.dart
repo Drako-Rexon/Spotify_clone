@@ -7,8 +7,8 @@ import 'package:spotify/homepage/homepage.dart';
 import 'package:spotify/library_page/library.dart';
 
 class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
-
+  // const Home({Key? key}) : super(key: key);
+  const Home({super.key});
   @override
   State<Home> createState() => _HomeState();
 }
@@ -34,7 +34,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: const Color.fromARGB(255, 42, 154, 109),
       bottomNavigationBar: getNav(),
       body: getBody(),
     );
@@ -48,8 +48,20 @@ class _HomeState extends State<Home> {
   }
 
   Widget getNav() {
-    return SizedBox(
-      height: 150,
+    return Container(
+      height: 60,
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            sBlack,
+            sBlack.withOpacity(0.6),
+            sBlack.withOpacity(0.2),
+            const Color.fromARGB(0, 1, 14, 0),
+          ],
+          begin: Alignment.centerLeft,
+          end: Alignment.topCenter,
+        ),
+      ),
       width: ResSize.screenWidth,
       child: ListView.builder(
           scrollDirection: Axis.horizontal,
