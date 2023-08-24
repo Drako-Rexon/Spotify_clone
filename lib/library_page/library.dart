@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:spotify/components/colors.dart';
 import 'package:spotify/components/res_size.dart';
 import 'package:spotify/components/sample_song_json.dart';
+import 'package:spotify/components/variables.dart';
 import 'package:spotify/components/widgets.dart';
 
 class LibraryPage extends StatefulWidget {
@@ -139,18 +140,17 @@ class _LibraryPageState extends State<LibraryPage> {
                 right: 10,
               ),
               height: 70,
-              child: const Row(
+              child: Row(
                 children: [
                   CircleAvatar(
                     backgroundColor: sLightGrey,
                     radius: 70,
                     child: Image(
-                      image: NetworkImage(
-                          'https://www.clipartmax.com/png/middle/17-171655_how-to-set-use-add-button-white-svg-vector-add-white-icon.png'),
+                      image: AssetImage(addIcon),
                     ),
                   ),
-                  SizedBox(width: 15),
-                  Column(
+                  const SizedBox(width: 15),
+                  const Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [

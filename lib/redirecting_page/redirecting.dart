@@ -49,17 +49,24 @@ class _HomeState extends State<Home> {
 
   Widget getNav() {
     return SizedBox(
-      height: 130,
+      height: 150,
       width: ResSize.screenWidth,
-      child: Row(
-        children: List.generate(navIconEn.length, (index) {
-          return Expanded(
-            child: IconButton(
-              icon: Column(
+      child: ListView.builder(
+          scrollDirection: Axis.horizontal,
+          itemCount: 3,
+          itemBuilder: (BuildContext ctx, int index) {
+            return InkWell(
+              onTap: () {
+                setState(() {
+                  activeTab = index;
+                });
+              },
+              child: Column(
                 children: [
                   Image.asset(
                     activeTab == index ? navIconEn[index] : navIconDis[index],
                     height: 30,
+                    width: 30,
                   ),
                   Text(
                     navIconName[index],
@@ -67,15 +74,8 @@ class _HomeState extends State<Home> {
                   ),
                 ],
               ),
-              onPressed: () {
-                setState(() {
-                  activeTab = index;
-                });
-              },
-            ),
-          );
-        }),
-      ),
+            );
+          }),
     );
   }
 }

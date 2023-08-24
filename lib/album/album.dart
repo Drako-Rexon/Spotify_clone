@@ -97,9 +97,7 @@ class _AlbumPageState extends State<AlbumPage> {
                             context,
                             PageTransition(
                               alignment: Alignment.bottomCenter,
-                              child: AlbumPage(
-                                song: songs[index],
-                              ),
+                              child: AlbumPage(song: songs[index]),
                               type: PageTransitionType.scale,
                             ),
                           );
