@@ -5,8 +5,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:spotify/components/colors.dart';
-import 'package:spotify/redirecting_page/redirecting.dart';
+import 'package:spotify/utils/colors.dart';
+
+import 'views/redirecting_page/redirecting.dart';
 
 void main() {
   // ? This is for the chaging theme of status bar while app is running

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:spotify/Search/search.dart';
-import 'package:spotify/components/colors.dart';
-import 'package:spotify/components/res_size.dart';
-import 'package:spotify/components/variables.dart';
-import 'package:spotify/homepage/homepage.dart';
-import 'package:spotify/library_page/library.dart';
+import 'package:spotify/utils/colors.dart';
+import 'package:spotify/utils/res_size.dart';
+import 'package:spotify/utils/variables.dart';
+import 'package:spotify/views/homepage/homepage.dart';
+import 'package:spotify/views/library_page/library.dart';
+import 'package:spotify/views/search/search.dart';
 
 class Home extends StatefulWidget {
   // const Home({Key? key}) : super(key: key);
