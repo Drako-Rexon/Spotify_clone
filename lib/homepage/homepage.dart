@@ -6,6 +6,7 @@ import 'package:spotify/components/widgets.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
+
   @override
   State<HomePage> createState() => _HomePageState();
 }
@@ -84,30 +85,8 @@ class _HomePageState extends State<HomePage> {
                       );
                     },
                   ),
-
-                  // children: List.generate(homeTopCardOne.length ~/ 2, (index) {
-                  //   return Container(
-                  //     padding: const EdgeInsets.only(bottom: 10),
-                  //     width: ResSize.screenWidth - 30,
-                  //     child: Row(
-                  //       mainAxisSize: MainAxisSize.max,
-                  //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  //       children: [
-                  //         CardHomeTopPage(
-                  //           img: homeTopCardOne[index * 2]["img"],
-                  //           text: homeTopCardOne[index * 2]["title"],
-                  //         ),
-                  //         CardHomeTopPage(
-                  //           img: homeTopCardOne[(index * 2) + 1]["img"],
-                  //           text: homeTopCardOne[(index * 2) + 1]["title"],
-                  //         ),
-                  //       ],
-                  //     ),
-                  //   );
-                  // }),
                 ),
                 const SizedBox(height: 30),
-                // * Card with profile and card
                 const Padding(
                   padding: EdgeInsets.only(
                     left: 20,
@@ -138,11 +117,7 @@ class _HomePageState extends State<HomePage> {
                   listing: homeCarouselTypeTwo2,
                 ),
                 const Padding(
-                  padding: EdgeInsets.only(
-                    left: 20,
-                    top: 20,
-                    bottom: 10,
-                  ),
+                  padding: EdgeInsets.only(left: 20, top: 20, bottom: 10),
                   child: ProfileCard(
                     imgAdd: 'assets/images/home/carousel5/1.png',
                     artistName: 'Kodaline',

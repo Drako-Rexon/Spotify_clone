@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:spotify/components/colors.dart';
 import 'package:spotify/components/res_size.dart';
 import 'package:spotify/components/sample_song_json.dart';
+import 'package:spotify/components/variables.dart';
 import 'package:spotify/components/widgets.dart';
 
 class LibraryPage extends StatefulWidget {
@@ -22,7 +23,7 @@ class _LibraryPageState extends State<LibraryPage> {
         shadowColor: Colors.black,
         elevation: 4,
         titleSpacing: 0,
-        bottom: AppBarCustomForSpotify(),
+        bottom: appBarCustomForSpotify(),
       ),
       backgroundColor: sBlack,
       body: SingleChildScrollView(
@@ -139,18 +140,17 @@ class _LibraryPageState extends State<LibraryPage> {
                 right: 10,
               ),
               height: 70,
-              child: const Row(
+              child: Row(
                 children: [
                   CircleAvatar(
                     backgroundColor: sLightGrey,
                     radius: 70,
                     child: Image(
-                      image: NetworkImage(
-                          'https://www.clipartmax.com/png/middle/17-171655_how-to-set-use-add-button-white-svg-vector-add-white-icon.png'),
+                      image: AssetImage(addIcon),
                     ),
                   ),
-                  SizedBox(width: 15),
-                  Column(
+                  const SizedBox(width: 15),
+                  const Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -170,7 +170,7 @@ class _LibraryPageState extends State<LibraryPage> {
     );
   }
 
-  PreferredSize AppBarCustomForSpotify() {
+  PreferredSize appBarCustomForSpotify() {
     return PreferredSize(
       preferredSize: const Size.fromHeight(100),
       child: Column(
@@ -233,6 +233,7 @@ class _LibraryPageState extends State<LibraryPage> {
                         width: 10,
                         height: 10,
                         color: Colors.white,
+                        child: const Icon(Icons.cancel_outlined),
                       )
                     : Container(),
                 const SortingButtons(title: 'Playlists'),
