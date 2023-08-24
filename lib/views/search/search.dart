@@ -1,9 +1,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:spotify/components/colors.dart';
-import 'package:spotify/components/res_size.dart';
-import 'package:spotify/components/sample_song_json.dart';
-import 'package:spotify/components/widgets.dart';
+import 'package:spotify/utils/colors.dart';
+import 'package:spotify/utils/res_size.dart';
+import 'package:spotify/data/sample_song_json.dart';
+import 'package:spotify/utils/widgets.dart';
 
 class SearchPage extends StatelessWidget {
   const SearchPage({Key? key}) : super(key: key);
