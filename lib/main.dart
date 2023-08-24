@@ -1,9 +1,11 @@
 /*
  * figmafile - https://www.figma.com/file/crFVGv2cBEhaBmqnB8PG0G/SPOTIFY-MOBILE-APP-(Community)?type=design&node-id=0-1&t=3iIMowevwMxxHveS-0
 */
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:spotify/components/colors.dart';
 import 'package:spotify/redirecting_page/redirecting.dart';
 
 void main() {
@@ -20,10 +22,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(primaryColor: sGreen),
       title: 'Spotify',
-      home: Home(),
+      home: const Home(),
     );
   }
 }
