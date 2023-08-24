@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
-import 'package:spotify/components/colors.dart';
+import 'package:spotify/utils/colors.dart';
 
 class MusicPlayer extends StatefulWidget {
   final String title;

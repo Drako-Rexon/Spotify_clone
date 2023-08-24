@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:spotify/components/colors.dart';
-import 'package:spotify/components/res_size.dart';
+import 'package:spotify/utils/colors.dart';
+import 'package:spotify/utils/res_size.dart';
 import 'package:unicons/unicons.dart';
 
 class CardHomeTopPage extends StatelessWidget {
