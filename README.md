@@ -25,6 +25,5 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Screenshots
 
-![Screenshot](assets/images/screenshots/1.png) ![Screenshot](assets/images/screenshots/2.png)
-![Screenshot](assets/images/screenshots/3.png) ![Screenshot](assets/images/screenshots/4.png)
-![Screenshot](assets/images/screenshots/5.png)
+![Screenshot](assets/images/screenshots/1.jpg) ![Screenshot](assets/images/screenshots/2.jpg)
+![Screenshot](assets/images/screenshots/3.jpg) ![Screenshot](assets/images/screenshots/4.jpg)
